@@ -1,6 +1,11 @@
 body{
 	background: #000005;
 	color:white;
+	text-align: center;
+}
+
+img {
+	max-width: 50%;
 }
 
 .button.button-primary{
