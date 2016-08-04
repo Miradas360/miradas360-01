@@ -38,41 +38,66 @@
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
   </head>
   <body>
+    <style>
+      html{
+        background: #000;
+      }
+    </style>
     <a-scene>
       <a-assets>  
-        <img  id="playa" src="PANO_20160804_163510.jpg">
+        <img  id="beccar" src="beccar.png">
         <img  id="noche" src="PANO_20160804_164157.jpg">
+        <img  id="chalecito" src="chalecito.jpg">
 
       </a-assets>
-      <a-sky  src="#playa" rotation="0 -130 0">
+
+      
+      <a-sky  src="#beccar" opacity="0" rotation="0 -130 0">
        <a-animation 
             attribute="opacity" 
               from="0" 
               to="1" 
-              begin="0"
-              dur="1000">
+              begin="10000"
+              dur="5000">
             </a-animation>
              <a-animation 
             attribute="opacity" 
               from="1" 
               to="0" 
-              begin="15000"
+              begin="20000"
               dur="20000">
             </a-animation>
 
     </a-sky>
+     <a-image src="#chalecito" opacity="0" width="10" height="5" position="0 2 -3"
+               scale="0.8 0.8 0.8">
+      <a-animation 
+            attribute="opacity" 
+              from="0" 
+              to="1" 
+              begin="0"
+              dur="5000">
+               </a-animation>
+      <a-animation 
+            attribute="opacity" 
+              from="1" 
+              to="0" 
+              begin="10000"
+              dur="5000">
+                </a-animation>
+       </a-image>
       <a-sky  src="#noche" opacity="0" rotation="0 -130 0">
 
        <a-animation 
             attribute="opacity" 
               from="0" 
               to="1" 
-              begin="15000"
+              begin="20000"
               dur="20000">
             </a-animation>
 
     </a-sky>
-    
+
       <a-camera position="0 1.8 1.5"></a-camera>
     </a-scene>
   </body>
