@@ -69,7 +69,19 @@
             </a-animation>
 
     </a-sky>
-     <a-image src="#chalecito" opacity="0" width="10" height="5" position="0 2 -3"
+   
+      <a-sky  src="#noche" opacity="0" rotation="0 -130 0">
+
+       <a-animation 
+            attribute="opacity" 
+              from="0" 
+              to="1" 
+              begin="20000"
+              dur="20000">
+            </a-animation>
+
+    </a-sky>
+  <a-image src="#chalecito" opacity="0" width="10" height="5" position="0 2 -3"
                scale="0.8 0.8 0.8">
       <a-animation 
             attribute="opacity" 
@@ -86,18 +98,6 @@
               dur="5000">
                 </a-animation>
        </a-image>
-      <a-sky  src="#noche" opacity="0" rotation="0 -130 0">
-
-       <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="20000"
-              dur="20000">
-            </a-animation>
-
-    </a-sky>
-
       <a-camera position="0 1.8 1.5"></a-camera>
     </a-scene>
   </body>
