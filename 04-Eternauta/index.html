@@ -45,14 +45,14 @@
     </style>
     <a-scene>
       <a-assets>  
-        <img  id="beccar" src="beccar.png">
-        <img  id="noche" src="PANO_20160804_164157.jpg">
-        <img  id="chalecito" src="chalecito.jpg">
+        <img  id="beccar" src="beccar-1.jpeg">
+        <img  id="noche" src="devoto-4.jpg">
+        <img  id="chalecito" src="eternauta-casa.jpg">
 
       </a-assets>
-
+<a-entity id="river" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:Oesterheld-El-Heroe-En-Grupo-Unido.mp3; loop:true; autoplay: true"></a-entity>
       
-      <a-sky  src="#beccar" opacity="0" rotation="0 -130 0">
+      <a-sky  src="#beccar" opacity="0" rotation="0 -75 0">
        <a-animation 
             attribute="opacity" 
               from="0" 
@@ -64,20 +64,21 @@
             attribute="opacity" 
               from="1" 
               to="0" 
-              begin="20000"
-              dur="20000">
+              begin="40000"
+              dur="15000">
             </a-animation>
 
     </a-sky>
    
-      <a-sky  src="#noche" opacity="0" rotation="0 -130 0">
+      <a-sky  src="#noche" opacity="0" rotation="0 -75 0">
+
 
        <a-animation 
             attribute="opacity" 
               from="0" 
               to="1" 
-              begin="20000"
-              dur="20000">
+              begin="40000"
+              dur="15000">
             </a-animation>
 
     </a-sky>
