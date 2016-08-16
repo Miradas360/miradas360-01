@@ -37,6 +37,8 @@
     <meta name="description" content="Episodio 04 - Eternauta Eterno, un viaje a la eternidad de Oesterheld.">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
      <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+     <script src="/fonts/Muli_Regular.js"></script>
+     
 
   </head>
   <body>
@@ -47,10 +49,14 @@
     </style>
     <a-scene>
       <a-assets>  
+        <img  id="cardboard" src="../images/cardboard.png">
+        <img  id="headphones"  src="../images/headphones.png">
+        <img  id="rotation" src="../images/rotation.png">
+        <img  id="noche" src="devoto-4.jpg">
         <img  id="beccar" src="beccar-1.jpeg">
         <img  id="noche" src="devoto-4.jpg">
         <img  id="chalecito" src="eternauta-casa.jpg">
-
+          <a-mixin id="font" text="font: Muli"></a-mixin>
       </a-assets>
 
 
@@ -88,7 +94,7 @@
             </a-animation>
 
     </a-sky>
-  <a-image src="#chalecito" opacity="0" width="10" height="5" position="0 2 -3"
+<!--   <a-image src="#chalecito" opacity="0" width="10" height="5" position="0 2 -3"
                scale="0.8 0.8 0.8">
       <a-animation 
             attribute="opacity" 
@@ -105,18 +111,120 @@
               dur="5000">
                 </a-animation>
        </a-image>
-      <a-plane text="text: Miradas 360 #1;" position="-2.2 2 -3" opacity="0" color="white">
-        <a-animation attribute="opacity" from="0" to="1" dur="5000"></a-animation>
-         <a-animation attribute="opacity" from="1" to="0" begin="10000" dur="5000"></a-animation>
+ -->
+
+  <a-entity>
+    <a-image src="#headphones" opacity="0"  position="0 3 -3">
+      <a-animation 
+            attribute="opacity" 
+              from="0" 
+              to="1" 
+              begin="0"
+              dur="5000">
+               </a-animation>
+      <a-animation 
+            attribute="opacity" 
+              from="1" 
+              to="0" 
+              begin="5000"
+              dur="5000">
+                </a-animation>
+              <a-animation attribute="rotation"
+               dur="5000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="2"></a-animation>
+       </a-image>
+
+       <a-image src="#cardboard" opacity="0"  position="0 3 -3">
+      <a-animation 
+            attribute="opacity" 
+              from="0" 
+              to="1" 
+              begin="5000"
+              dur="5000">
+               </a-animation>
+      <a-animation 
+            attribute="opacity" 
+              from="1" 
+              to="0" 
+              begin="10000"
+              dur="5000">
+                </a-animation>
+                <a-animation attribute="rotation"
+               dur="5000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="2"></a-animation>
+       </a-image>
+       <a-image src="#rotation" opacity="0" position="0 3 -3">
+      <a-animation 
+            attribute="opacity" 
+              from="0" 
+              to="1" 
+              begin="10000"
+              dur="5000">
+               </a-animation>
+      <a-animation 
+            attribute="opacity" 
+              from="1" 
+              to="0" 
+              begin="15000"
+              dur="5000">
+                </a-animation>
+                <a-animation attribute="rotation"
+               dur="5000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="2"></a-animation>
+       </a-image>
+
+
+
+       
+<a-plane text="text: Vas a poder moverte libremente todo el tiempo;
+ size:0.15" 
+      mixin="font" opacity="0" color="white" position="-2 2 -3">
+        <a-animation attribute="opacity" from="0" to="1" begin="10000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="15000" dur="5000">
+       </a-animation>
+
+  </a-plane>
+   <a-plane text="text: Coloca tu telefono en el Cardboard;
+ size:0.15" 
+      mixin="font" opacity="0" color="white" position="-1.75 2 -3">
+       <a-animation attribute="opacity" from="0" to="1" begin="5000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="10000" dur="5000">
+       </a-animation>
+      </a-plane>
+       <a-plane text="text: Ponete auriculares para una mejor experiencia;
+ size:0.15" 
+      mixin="font" opacity="0" color="white" position="-2.25 2 -3">
+        <a-animation attribute="opacity" from="0" to="1" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="5000" dur="5000">
+       </a-animation>
+      </a-plane>
+
+      <a-plane text="text: Miradas 360 #1;" 
+      mixin="font"
+      position="-2.2 2 -3" opacity="0" color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="20000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="25000" dur="5000">
+       </a-animation>
       </a-plane>
        <a-plane text="text: Eternauta Eterno;"  position="-2.2 1 -3" opacity="0" color="white">
-        <a-animation attribute="opacity" from="0" to="1" dur="5000"></a-animation>
-         <a-animation attribute="opacity" from="1" to="0" begin="10000" dur="5000"></a-animation>
+        <a-animation attribute="opacity" from="0" to="1" begin="20000" dur="5000"></a-animation>
+         <a-animation attribute="opacity" from="1" to="0" begin="25000" dur="5000"></a-animation>
       </a-plane>
-      <a-plane text="text: Eternauta Eterno;"  position="-2.2 1 -3" opacity="0" color="white">
-        <a-animation attribute="opacity" from="0" to="1" dur="5000"></a-animation>
-         <a-animation attribute="opacity" from="1" to="0" begin="10000" dur="5000"></a-animation>
-      </a-plane>
+   
       <a-camera position="0 1.8 1.5"></a-camera>
     </a-scene>
   </body>
