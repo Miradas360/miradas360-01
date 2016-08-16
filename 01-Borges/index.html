@@ -5,7 +5,6 @@
     <title>Borges VR</title>
     <meta name="description" content="Borges VR">
     <script src="js/aframe.min.js"></script>
-    <script src="js/jquery.min.js"></script>
   </head>
   <body>
 
@@ -17,9 +16,6 @@
         <img id="bgEscena2" src="img/bgEscena2.jpg">
         <img id="bgEscena3" src="img/bgEscena3.jpg">
         <img id="bgEscena4" src="img/bgEscena4.jpg">
-        <img id="bgEscena5" src="img/bgEscena5.jpg">
-        <img id="bgEscena6" src="img/bgEscena6.jpg">
-        <img id="bgEscena7" src="img/bgEscena7.jpg">
 
         <img id="pathEscena1" src="img/pathEscena1.png">
         <img id="tituloEscena1" src="img/tituloEscena1.png">
@@ -33,152 +29,140 @@
         <img id="pathEscena4" src="img/pathEscena4.png">
         <img id="tituloEscena4" src="img/tituloEscena4.png">
 
-        <img id="pathEscena5" src="img/pathEscena5.png">
-        <img id="tituloEscena5" src="img/tituloEscena5.png">
-
-        <img id="pathEscena6" src="img/pathEscena6.png">
-        <img id="tituloEscena6" src="img/tituloEscena6.png">
-
-        <img id="pathEscena7" src="img/pathEscena7.png">
-        <img id="tituloEscena7" src="img/tituloEscena7.png">
-
-        <!--audio id="tango" src="sound/astor-piazzolla_luis-medina-castro_jorge-luis-borges--el-tango-1965.mp3"-->
-
       </a-assets>
 
       <a-entity sound="src: sound/astor-piazzolla_luis-medina-castro_jorge-luis-borges--el-tango-1965.mp3; autoplay: true; volume: 0.2;"></a-entity>
 
       <a-entity position="0 2.2 4">
         <a-entity id="camara" camera look-controls wasd-controls>
-
           <a-cursor color="#2E3A87">
-
-          <a-image class="carteles" position="-2.8 0 -1" rotation="0 0 0" width="0.5" height="2" src="#pathEscena1" ></a-image>
-          <a-image class="carteles" position="0 -1.5 -1" rotation="0 0 0" width="4" height="1" src="#tituloEscena1" ></a-image>
-
+          <a-image id="path" position="-2.8 0 -1" rotation="0 0 0" width="0.5" height="2" src="#pathEscena1" ></a-image>
+          <a-image id="titulo" position="0 -1.5 -1" rotation="0 0 0" width="4" height="1" src="#tituloEscena1" ></a-image>
         </a-entity>
       </a-entity>
 
-      <a-sphere id="escena1" src="#bgEscena1" radius="1">
-        <a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" from="0 0 -1" to="10 10 -10" repeat="0"></a-animation>
-        <a-animation attribute="position" direction="alternate" dur="3000" easing="linear" from="0 0 -9" to="0 -1 0" repeat="0"></a-animation>
-        <a-animation attribute="rotation" direction="alternate" dur="3000" easing="linear" to="0 180 0" repeat="0"></a-animation>
+      <a-sphere class="escena" src="#bgEscena1" radius="1">
+        <a-animation attribute="scale" direction="alternate" dur="4000" easing="ease-in" from="0 0 0" to="10 10 -10" repeat="0"></a-animation>
+        <a-animation attribute="position" direction="alternate" dur="4000" easing="ease-out" from="0 1.5 -12" to="0 1.5 0" repeat="0"></a-animation>
+        <a-animation attribute="rotation" direction="alternate" dur="5000" easing="ease-out" from="-180 0 0" to="0 350 0" repeat="0"></a-animation>
+        <a-entity sound="src: sound/audio-1_borges.mp3; autoplay: true; volume: 3;" position="-2 1.2 0"></a-entity>
       </a-sphere>
 
-      <a-sphere id="escena2" src="#bgEscena2" radius="1" position="-5 0 0" scale="0 0 -1"></a-sphere>
+      <a-sphere class="escena" src="#bgEscena2" radius="1" rotation="0 -90 0" position="0 10 0" scale="0 0 0"></a-sphere>
 
-      <a-sphere id="escena3" src="#bgEscena3" radius="1" position="0 0 0" scale="9 9 -9" opacity="0"></a-sphere>
+      <a-sphere class="escena" src="#bgEscena3" radius="1" rotation="0 -90 0" position="0 0 0" scale="0 0 0"></a-sphere>
 
-      <a-sphere id="escena4" src="#bgEscena4" radius="1" position="0 0 15" scale="0 0 0"></a-sphere>
+      <a-sphere class="escena" src="#bgEscena4" radius="1" position="0 0 15" scale="0 0 0"></a-sphere>
 
-      <a-sphere id="escena5" src="#bgEscena5" radius="1" position="0 0 0" scale="0 0 0"></a-sphere>
-
-      <a-sphere id="escena6" src="#bgEscena6" radius="1" position="0 -10 0" scale="9 9 -9" opacity="0"></a-sphere>
-
-      <a-sphere id="escena7" src="#bgEscena7" radius="1" position="0 -1 0" scale="0 0 0" opacity="0"></a-sphere>
-
-      <a-plane id="puertaAEscena2" position="2 0.7 -2" rotation="0 15 0" width="1" height="2" material="color: red; opacity: 0.3;"></a-plane>
+      <a-torus id="portal" position="5 -.5 3.8" rotation="0 90 0" color="red" opacity=".4" segments-radial="4" segments-tubular="100" radius=".6" radius-tubular="0.02" scale="0 0 0">
+        <a-sphere id="gatillo" position="0 0 0" color="red;" opacity=".2" radius=".1">
+          <a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" to=".3" repeat="indefinite"></a-animation>
+        </a-sphere>
+      </a-torus>
 
     </a-scene>
 
     <script>
 
-      $('a-scene').on('click', '#puertaAEscena2', function(e) {
+      var escenaNro = 0;
 
-        $(this).remove();
-        $('.carteles').remove();
+      var transiciones = {
 
-        escena1.innerHTML = '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation><a-animation attribute="position"  direction="alternate" dur="3000" easing="linear" to="15 0 -9" repeat="0"></a-animation>';
+        transicion1:{
+          animEscenaSale:
+          '<a-animation attribute="scale" begin="1500" dur="0" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+          animEscenaEntra:
+          '<a-animation attribute="scale" dur="0" easing="linear" to="9 9 -9" repeat="0"></a-animation>' + 
+          '<a-animation attribute="position" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+          posPortal: [-3.5, -2, 5],
+          rotPortal: [15, -48, 0],
+          pathSrc: '#pathEscena2',
+          tituloSrc: '#tituloEscena2',
+          audioSrc: '<a-entity sound="src: sound/audio-2_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+        },
 
-        setTimeout(function(){
-          $('#escena1').remove();
-          escena2.innerHTML = '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation><a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation><a-entity sound="src: sound/audio-2_borges.mp3; autoplay: true; volume: 3;"></a-entity>';
-          $('a-scene').append('<a-plane id="puertaAEscena3" position="2 0.7 -2" rotation="0 15 0" width="1" height="2" material="color: blue; opacity: 0.3;"></a-plane>');
-          $('#camara').append('<a-image class="carteles" position="-1.4 0 -1" rotation="0 0 0" width="0.25" height="1" src="#pathEscena2" ></a-image><a-image class="carteles" position="0 -0.7 -1" rotation="0 0 0" width="2" height="0.5" src="#tituloEscena2" ></a-image>');
-        }, 3000);
-      });
+        transicion2:{
+          animEscenaSale:
+          '<a-animation attribute="scale" begin="1500" dur="0" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+          animEscenaEntra:
+          '<a-animation attribute="scale" direction="alternate" dur="2000" easing="linear" to="9 9 -9" repeat="0"></a-animation>' +
+          '<a-animation attribute="position" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+          posPortal: [0, 2.2, 1],
+          rotPortal: [0, 0, 0],
+          pathSrc: '#pathEscena3',
+          tituloSrc: '#tituloEscena3',
+          audioSrc: '<a-entity sound="src: sound/audio-3_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+        },
 
-      $('a-scene').on('click', '#puertaAEscena3', function(e) {
+        transicion3:{
+          animEscenaSale:
+          '<a-animation attribute="material.opacity" direction="alternate" dur="1000" easing="linear" to="0" repeat="0"></a-animation>',
+          animEscenaEntra:
+          '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation>' +
+          '<a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+          posPortal: [1, 1, 1],
+          rotPortal: [0, 0, 0],
+          pathSrc: '#pathEscena4',
+          tituloSrc: '#tituloEscena4',
+          audioSrc: '<a-entity sound="src: sound/audio-4_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+        },
 
-        $(this).remove();
-        $('.carteles').remove();
+        transicion4:{
+          animEscenaSale:
+          '<a-animation attribute="scale" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>' + 
+          '<a-animation attribute="position"  direction="alternate" dur="2000" easing="linear" to="15 0 -9" repeat="0"></a-animation>',
+          animEscenaEntra:
+          '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation>' +
+          '<a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+          posPortal: [1, 1, 1],
+          rotPortal: [0, 0, 0],
+          pathSrc: '#pathEscena1',
+          tituloSrc: '#tituloEscena1',
+          audioSrc: '<a-entity sound="src: sound/audio-1_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+        }    
+      };
 
-        escena2.innerHTML = '<a-animation attribute="material.opacity" direction="alternate" dur="1000" easing="linear" to="0" repeat="0"></a-animation>';
-        escena3.innerHTML = '<a-animation attribute="material.opacity" direction="alternate" dur="1000" easing="linear" to="1" repeat="0"></a-animation>';
-        
-        setTimeout(function(){
-          $('#escena2').remove();
-          $('#escena3').append('<a-entity sound="src: sound/audio-3_borges.mp3; autoplay: true; volume: 3;"></a-entity>');
-          $('a-scene').append('<a-plane id="puertaAEscena4" position="2 0.7 -2" rotation="0 15 0" width="1" height="2" material="color: green; opacity: 0.3;"></a-plane>');
-           $('#camara').append('<a-image class="carteles" position="-1.4 0 -1" rotation="0 0 0" width="0.25" height="1" src="#pathEscena3" ></a-image><a-image class="carteles" position="0 -0.6 -1" rotation="0 0 0" width="2" height="0.5" src="#tituloEscena3" ></a-image>');
-        }, 2000);
-      });
+      function cambioEscena(){
+        var posicion = Object.keys(transiciones)[escenaNro];
+        escenaNro++;
+        aEscena(
+          transiciones[posicion].animEscenaSale,
+          transiciones[posicion].animEscenaEntra,
+          transiciones[posicion].posPortal,
+          transiciones[posicion].rotPortal,
+          transiciones[posicion].pathSrc,
+          transiciones[posicion].tituloSrc,
+          transiciones[posicion].audioSrc
+        );
+      }
 
-      $('a-scene').on('click', '#puertaAEscena4', function(e) {
+      function mostrarPortal(){
+        portal.setAttribute('scale', { x: 1, y: 1, z: 1 });
+      }
 
-        $(this).remove();
-        $('.carteles').remove();
+      function aEscena(animEscenaSale, animEscenaEntra, posPortal, rotPortal, pathSrc, tituloSrc, audioSrc) {
+        document.getElementsByClassName("escena")[(escenaNro - 1)].innerHTML = animEscenaSale;
+        document.getElementsByClassName("escena")[escenaNro].innerHTML = animEscenaEntra + audioSrc;
+        path.setAttribute('src', pathSrc);
+        titulo.setAttribute('src', tituloSrc);
+        portal.setAttribute('scale', { x: 0, y: 0, z: 0 });
+        portal.setAttribute('position', { x: posPortal[0], y: posPortal[1], z: posPortal[2] });
+        portal.setAttribute('rotation', { x: rotPortal[0], y: rotPortal[1], z: rotPortal[2] });
+      }
 
-        escena3.innerHTML = '<a-animation attribute="material.opacity" direction="alternate" dur="1000" easing="linear" to="0" repeat="0"></a-animation>';
-        escena4.innerHTML = '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation><a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation>';
-        
-        setTimeout(function(){
-          $('#escena3').remove();
-          $('#escena4').append('<a-entity sound="src: sound/audio-4_borges.mp3; autoplay: true; volume: 3;"></a-entity>');
-          $('a-scene').append('<a-plane id="puertaAEscena5" position="2 0.7 -2" rotation="0 15 0" width="1" height="2" material="color: green; opacity: 0.3;"></a-plane>');
-           $('#camara').append('<a-image class="carteles" position="-1.4 0 -1" rotation="0 0 0" width="0.25" height="1" src="#pathEscena4" ></a-image><a-image class="carteles" position="0 -0.7 -1" rotation="0 0 0" width="2" height="0.5" src="#tituloEscena4" ></a-image>');
-        }, 2000);
-      });
+      portal.onmouseenter = function (e) {
+        gatillo.innerHTML = '<a-animation attribute="geometry.radius" dur="3000" easing="linear" from=".4" to=".6" repeat="0"></a-animation>';
+      };
 
-      $('a-scene').on('click', '#puertaAEscena5', function(e) {
+      portal.onmouseleave = function (e) {
+        gatillo.innerHTML = '<a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" from=".2" to=".3" repeat="indefinite"></a-animation>';
+      };
 
-        $(this).remove();
-        $('.carteles').remove();
+      portal.addEventListener('animationend', cambioEscena, false);
 
-        escena5.innerHTML = '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="9 9 -9" repeat="0"></a-animation>';
-        
-        setTimeout(function(){
-          $('#escena4').remove();
-          $('#escena5').append('<a-entity sound="src: sound/audio-5_borges.mp3; autoplay: true; volume: 3;"></a-entity>');
-          $('a-scene').append('<a-plane id="puertaAEscena6" position="2 0.7 -2" rotation="0 15 0" width="1" height="2" material="color: orange; opacity: 0.3;"></a-plane>');
-           $('#camara').append('<a-image class="carteles" position="-1.4 0 -1" rotation="0 0 0" width="0.25" height="1" src="#pathEscena5" ></a-image><a-image class="carteles" position="0 -0.7 -1" rotation="0 0 0" width="2" height="0.5" src="#tituloEscena5" ></a-image>');
-        }, 2000);
-      });
-
-      $('a-scene').on('click', '#puertaAEscena6', function(e) {
-
-        $(this).remove();
-        $('.carteles').remove();
-
-        escena5.innerHTML = '<a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 -10 0" repeat="0"></a-animation><a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation>';
-
-        escena6.innerHTML = '<a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 -1 0" repeat="0"></a-animation><a-animation attribute="material.opacity" direction="alternate" dur="1000" easing="linear" to="1" repeat="0"></a-animation>';
-        
-        setTimeout(function(){
-          $('#escena5').remove();
-          $('#escena6').append('<a-entity sound="src: sound/audio-6_borges.mp3; autoplay: true; volume: 3;"></a-entity>');
-          $('a-scene').append('<a-plane id="puertaAEscena7" position="2 0.7 -2" rotation="0 15 0" width="1" height="2" material="color: orange; opacity: 0.3;"></a-plane>');
-           $('#camara').append('<a-image class="carteles" position="-1.4 0 -1" rotation="0 0 0" width="0.25" height="1" src="#pathEscena6" ></a-image><a-image class="carteles" position="0 -0.7 -1" rotation="0 0 0" width="2" height="0.6" src="#tituloEscena6" ></a-image>');
-        }, 2000);
-      });
-
-      $('a-scene').on('click', '#puertaAEscena7', function(e) {
-
-        $(this).remove();
-        $('.carteles').remove();
-
-        escena7.innerHTML = '<a-animation attribute="rotation" direction="alternate" dur="3000" easing="linear" to="0 180 0" repeat="0"></a-animation><a-animation attribute="material.opacity" direction="alternate" dur="1000" easing="linear" to="1" repeat="0"></a-animation><a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation>';
-        
-        setTimeout(function(){
-          $('#escena6').remove();
-          $('#escena7').append('<a-entity sound="src: sound/audio-7_borges.mp3; autoplay: true; volume: 3;"></a-entity>');
-           $('#camara').append('<a-image class="carteles" position="-1.4 0 -1" rotation="0 0 0" width="0.25" height="1" src="#pathEscena7" ></a-image><a-image class="carteles" position="0 -0.7 -1" rotation="0 0 0" width="2" height="0.6" src="#tituloEscena7" ></a-image>');
-        }, 2000);
-      });
-
-      setTimeout(function(){
-        $('#escena1').append('<a-entity sound="src: sound/audio-1_borges.mp3; autoplay: true; volume: 3;"></a-entity>');
-      }, 2000);
+      for( var i in document.getElementsByClassName("escena") ){
+          document.getElementsByClassName("escena")[i].addEventListener('sound-ended', mostrarPortal, false);
+      }
 
     </script>
 
