@@ -217,6 +217,7 @@
       </a-plane>
 
  <a-entity id="first" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:01-beccar.mp3; loop:false; on:play"></a-entity>
+ <a-entity id="devoto" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:02-01-devoto.mp3; loop:false; on:play"></a-entity>
  <a-entity id="soundtrack" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:soundtrack.mp4; loop:true;autoplay:true;"></a-entity> -->
       
 
@@ -228,17 +229,17 @@
                begin="52000" dur="5000">
               </a-animation>
                <a-animation attribute="opacity" from="1" to="0" 
-               begin="177000" dur="5000">
+               begin="155000" dur="5000">
              </a-animation>
-             <a-animation attribute="visible" begin="182000" to="false"></a-animation>
+             <a-animation attribute="visible" begin="165000" to="false"></a-animation>
 
     </a-sky>
    
       <a-sky  src="#noche" opacity="0" rotation="0 -75 0">
 
-          <a-animation attribute="visible" begin="190000" to="true"></a-animation>
-              <a-animation attribute="opacity" from="0" to="1" 
-               begin="190000" dur="5000">
+          <a-animation attribute="visible" begin="180000" to="true"></a-animation>
+              <a-animation id="devotoPlay" attribute="opacity" from="0" to="1" 
+               begin="180000" dur="5000">
               </a-animation>
                <a-animation attribute="opacity" from="1" to="0" 
                begin="263000" dur="5000">
@@ -264,14 +265,14 @@
 
         <a-image src="#casa" opacity="0" visibility="false" width="10" height="5" position="0 2 -3"
                scale="0.8 0.8 0.8">
-            <a-animation attribute="visible" begin="184000" to="true"></a-animation>
+            <a-animation attribute="visible" begin="155000" to="true"></a-animation>
               <a-animation attribute="opacity" from="0" to="1" 
-               begin="184000" dur="5000">
+               begin="155000" dur="5000">
               </a-animation>
                <a-animation attribute="opacity" from="1" to="0" 
-               begin="194000" dur="5000">
+               begin="180000" dur="5000">
              </a-animation>
-             <a-animation attribute="visible" begin="194000" to="false"></a-animation>
+             <a-animation attribute="visible" begin="185000" to="false"></a-animation>
 
        </a-image>
 
