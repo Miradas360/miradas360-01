@@ -2,76 +2,282 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Miradas 360 - Trinidad, Cuba</title>
+    <title>Miradas 360 - Temporada 01 - Episodio 04 -  El último viaje del Eternauta.</title>
     <!-- Facebook iframe embed  -->
     <meta name="twitter:card" content="player">
     <meta name="twitter:site" content="@divevr">
-    <meta name="twitter:title" content="Miradas 360 embed FB GOLAZOe">
-    <meta name="twitter:description" content="Documental online a través de fotografías 360 y audios para explorar lugares que merecen ser vistos, explorados y atravesados por una historia.">
+    <meta name="twitter:title" content="Miradas 360 - Temporada 01 - Episodio 04 - El último viaje del Eternauta">
+    <meta name="twitter:description" content="Un viaje a la eternidad de Oesterheld.
+    por Carolina Cerri, Leonardo Gentile, Martín Rabaglia y María Laura Ruggero">
     <meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg">
-    <meta name="twitter:player" content="https://miradas360.github.io/M1-Cuba/index.html">
+    <meta name="twitter:player" content="https://miradas360.github.io/miradas360-01/04-Eternauta/index.html">
     <meta name="twitter:player:width" content="600">
     <meta name="twitter:player:height" content="370">
     
-    <meta property="og:title" content="Miradas 360 embed FB GOLAZO" />
-    <meta property="og:url" content="https://miradas360.github.io/M1-Cuba">
-    <meta property="og:description" content="" />
+    <meta property="og:title" content="Miradas 360 - Temporada 01 - Episodio 04 - El último viaje del Eternauta">
+    <meta property="og:url" content="https://miradas360.github.io/miradas360-01/04-Eternauta">
+    <meta property="og:description"  content="Un viaje a la eternidad de Oesterheld.
+    por Carolina Cerri, Leonardo Gentile, Martín Rabaglia y María Laura Ruggero">
     <meta property="og:type" content="video" />
     <meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
     <meta property="og:image:seucre_url" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
      
     <meta property="og:type" content="video" />
-    <meta property="og:video:url" content="https://miradas360.github.io/M1-Cuba">
-    <meta property="og:video:secure_url" content="https://miradas360.github.io/M1-Cuba">
+    <meta property="og:video:url" content="https://miradas360.github.io/miradas360-01/04-Eternauta">
+    <meta property="og:video:secure_url" content="https://miradas360.github.io/miradas360-01/04-Eternauta">
     <meta property="og:video:type" content="text/html">
     <meta property="og:video:width" content="560">
     <meta property="og:video:height" content="395">
 
-     <meta property="og:video:url" content="https://miradas360.github.io/M1-Cuba">
-    <meta property="og:video:secure_url" content="https://miradas360.github.io/M1-Cuba">
+     <meta property="og:video:url" content="https://miradas360.github.io/miradas360-01/04-Eternauta">
+    <meta property="og:video:secure_url" content="https://miradas360.github.io/miradas360-01/04-Eternauta">
     <meta property="og:video:type" content="application/x-shockwave-flash">
     <meta property="og:video:width" content="560">
     <meta property="og:video:height" content="395">
      
 
-    <meta name="description" content="Documental online a través de fotografías 360 y audios para explorar lugares que merecen ser vistos, explorados y atravesados por una historia.">
+    <meta name="description" content="Un viaje a la eternidad de Oesterheld.
+    por Carolina Cerri, Leonardo Gentile, Martín Rabaglia y María Laura Ruggero">
+
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+     <script src="../fonts/Muli_Regular.js"></script>
+     
+
   </head>
   <body>
+    <style>
+      html{
+        background: #000;
+      }
+    </style>
     <a-scene>
       <a-assets>  
-        <img  id="playa" src="PANO_20160804_163510.jpg">
-        <img  id="noche" src="PANO_20160804_164157.jpg">
-
+        <img  id="cardboard" src="../images/cardboard.png">
+        <img  id="headphones"  src="../images/headphones.png">
+        <img  id="rotation" src="../images/rotation.png">
+        <a-mixin id="font" text="font: Muli"></a-mixin>
       </a-assets>
-      <a-sky  src="#playa" rotation="0 -130 0">
-       <a-animation 
+
+
+
+
+
+
+
+
+
+
+
+    <a-image src="#headphones" opacity="0"  position="0 3 -3">
+      <a-animation 
             attribute="opacity" 
               from="0" 
               to="1" 
               begin="0"
-              dur="1000">
-            </a-animation>
-             <a-animation 
+              dur="5000">
+               </a-animation>
+      <a-animation 
+            attribute="opacity" 
+              from="1" 
+              to="0" 
+              begin="5000"
+              dur="5000">
+                </a-animation>
+            <a-animation attribute="visible" begin="10000" to="false"></a-animation>
+
+              <a-animation attribute="rotation"
+               dur="5000"
+               fill="forwards"
+               to="0 360 0" 
+               repeat="2"></a-animation>
+       </a-image>
+
+       <a-image src="#cardboard" visibiity="false" opacity="0"  position="0 3 -3">
+         <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+
+      <a-animation 
+            attribute="opacity" 
+              from="0" 
+              to="1" 
+              begin="10000"
+              dur="5000">
+               </a-animation>
+      <a-animation 
             attribute="opacity" 
               from="1" 
               to="0" 
               begin="15000"
-              dur="20000">
-            </a-animation>
+              dur="5000">
+                </a-animation>
+                <a-animation attribute="visible" begin="20000" to="false"></a-animation>
 
-    </a-sky>
-      <a-sky  src="#noche" opacity="0" rotation="0 -130 0">
+                <a-animation attribute="rotation"
+                 begin="10000"
+               dur="5000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="3"></a-animation>
+       </a-image>
+       <a-image src="#rotation" visibiity="false" opacity="0"  position="0 3 -3">
+         <a-animation attribute="visible" begin="20000" to="true"></a-animation>
 
-       <a-animation 
+      <a-animation 
             attribute="opacity" 
               from="0" 
               to="1" 
-              begin="15000"
-              dur="20000">
-            </a-animation>
+              begin="20000"
+              dur="5000">
+               </a-animation>
+      <a-animation 
+            attribute="opacity" 
+              from="1" 
+              to="0" 
+              begin="25000"
+              dur="5000">
+          </a-animation>
+                <a-animation attribute="visible" begin="30000" to="false"></a-animation>
 
-    </a-sky>
+                <a-animation attribute="rotation"
+                 begin="20000"
+               dur="5000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="3"></a-animation>
+       </a-image>
+
+      
+
+  
+
+<a-plane text="text: Vas a poder moverte libremente todo el tiempo;
+ size:0.15" visibiity="false" 
+      mixin="font" opacity="0" color="white" position="-2 2 -3">
+        <a-animation attribute="visible" begin="20000" to="true"></a-animation>
+        <a-animation attribute="opacity" from="0" to="1" 
+         begin="20000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="25000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="30000" to="false"></a-animation>
+  </a-plane>
+  
+
+   <a-plane text="text: Coloca tu telefono en el Cardboard;
+ size:0.15" 
+      mixin="font" opacity="0" visibiity="false" color="white" position="-1.75 2 -3">
+        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
+        <a-animation attribute="opacity" from="0" to="1" 
+         begin="10000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="15000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="20000" to="false"></a-animation>
+
+      </a-plane>
+       
+       <a-plane text="text: Ponete auriculares para una mejor experiencia;
+ size:0.15" 
+      mixin="font" opacity="0" visibiity="false" color="white" position="-2.25 2 -3">
+        <a-animation attribute="opacity" from="0" to="1" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="5000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="10000" to="false"></a-animation>
+      </a-plane>
+
+      <a-plane text="text: Miradas 360 #1;" 
+      mixin="font"
+      position="-2.2 2 -3" opacity="0" visibiity="false" color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="35000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="40000" to="false"></a-animation>
+      </a-plane>
+       <a-plane text="text:  El ultimo viaje del Eternauta;" visibiity="false"  position="-2.2 1 -3" opacity="0" color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="35000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="40000" to="false"></a-animation>
+      </a-plane>
+
+      <a-plane text="text: Miradas 360 #1;" 
+      mixin="font"
+      position="-2.2 2 -3" opacity="0" visibiity="false" color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="45000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="45000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="50000" to="false"></a-animation>
+      </a-plane>
+       <a-plane text="text: El ultimo viaje del Eternauta;" visibiity="false"  position="-2.2 1 -3" opacity="0" color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="45000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="45000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="50000" to="false"></a-animation>
+      </a-plane>
+       
+
+
+  <a-plane text="text:Montado y Desarrollado entre Julio y Agosto 2016 ;size:0.15" visibiity="false"  
+       position="-3 3 -3" opacity="0"  color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="55000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
+      </a-plane>
+      <a-plane text="text: en Beccar(BA), Devoto(CABA) y Villa Bosch(BA);size:0.15" visibiity="false"  
+       position="-3 2.5 -3" opacity="0"  color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="55000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
+      </a-plane>
+      <a-plane text="text: Guion y produccion general: Carolina Cerri y Leonardo Gentile;size:0.15" visibiity="false"  
+       position="-3 2 -3" opacity="0"  color="white">
+         <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="55000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
+      </a-plane>
+      <a-plane text="text:  Mentoria, visuales e imagenes: Maria Laura Ruggero;size:0.15" visibiity="false"  
+       position="-3 1.5 -3" opacity="0"  color="white">
+        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="55000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
+      </a-plane>
+      <a-plane text="text: Montaje y programacion: Martin Rabaglia;size:0.15" visibiity="false"  
+       position="-3 1 -3" opacity="0"  color="white">
+         <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" 
+         begin="55000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
+      </a-plane>
+
+
+
+      
     
       <a-camera position="0 1.8 1.5"></a-camera>
     </a-scene>
