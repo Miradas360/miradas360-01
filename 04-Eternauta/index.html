@@ -60,6 +60,9 @@
         <img  id="beccar" src="01-02-beccar-2.jpeg">
         <img  id="noche" src="02-01-devoto-4.jpg">
         <img  id="chalecito" src="01-01-eternauta-casa-alt.jpg">
+        <img  id="casa" src=" 02-01-casa-devoto.jpg">
+
+       
 
         <a-mixin id="font" text="font: Muli"></a-mixin>
       </a-assets>
@@ -260,6 +263,19 @@
                begin="60000" dur="5000">
              </a-animation>
              <a-animation attribute="visible" begin="65000" to="false"></a-animation>
+
+       </a-image>
+
+        <a-image src="#casa" opacity="0" visibility="false" width="10" height="5" position="0 2 -3"
+               scale="0.8 0.8 0.8">
+            <a-animation attribute="visible" begin="184000" to="true"></a-animation>
+              <a-animation attribute="opacity" from="0" to="1" 
+               begin="184000" dur="5000">
+              </a-animation>
+               <a-animation attribute="opacity" from="1" to="0" 
+               begin="194000" dur="5000">
+             </a-animation>
+             <a-animation attribute="visible" begin="194000" to="false"></a-animation>
 
        </a-image>
 
