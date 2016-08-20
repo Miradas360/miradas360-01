@@ -2,286 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Miradas 360 - Temporada 01 - Episodio 03 -  TITULO DE LA PRODUCCION</title>
-    <!-- Facebook iframe embed  -->
-    <meta name="twitter:card" content="player">
-    <meta name="twitter:site" content="@divevr">
-    <meta name="twitter:title" content="Miradas 360 - Temporada 01 - Episodio 03 -  TITULO DE LA PRODUCCIO">
-    <meta name="twitter:description" content="DESCRIPCION 
-    por NOMBRES COMPLETOS DEL EQIUPO">
-    <meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg">
-    <meta name="twitter:player" content="https://miradas360.github.io/miradas360-01/03-Margot/index.html">
-    <meta name="twitter:player:width" content="600">
-    <meta name="twitter:player:height" content="370">
-    
-    <meta property="og:title"  content="Miradas 360 - Temporada 01 - Episodio 03 -  TITULO DE LA PRODUCCIO">
-    <meta property="og:url" content="https://miradas360.github.io/miradas360-01/03-Margot/index.html">
-    <meta property="og:description"  content="Un viaje a la eternidad de Oesterheld.
-    por Carolina Cerri, Leonardo Gentile, Martín Rabaglia y María Laura Ruggero">
-    <meta property="og:type" content="video" />
-    <meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
-    <meta property="og:image:seucre_url" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
-     
-    <meta property="og:type" content="video" />
-    <meta property="og:video:url" content="https://miradas360.github.io/miradas360-01/03-Margot/index.html">
-    <meta property="og:video:secure_url" content="https://miradas360.github.io/miradas360-01/03-Margot/index.html">
-    <meta property="og:video:type" content="text/html">
-    <meta property="og:video:width" content="560">
-    <meta property="og:video:height" content="395">
-
-     <meta property="og:video:url" content="https://miradas360.github.io/miradas360-01/03-Margot/index.html">
-    <meta property="og:video:secure_url" content="https://miradas360.github.io/miradas360-01/03-Margot/index.html">
-    <meta property="og:video:type" content="application/x-shockwave-flash">
-    <meta property="og:video:width" content="560">
-    <meta property="og:video:height" content="395">
-     
-
-    <meta name="description" content="DESCRIPCION 
-    por NOMBRES COMPLETOS DEL EQIUPO">
-
-    
+    <title>Miradas 360 - Trinidad, Cuba</title>
+    <meta name="description" content="Documental online a través de fotografías 360 y audios para explorar lugares que merecen ser vistos, explorados y atravesados por una historia.">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
-     <script src="../fonts/Muli_Regular.js"></script>
-     
+    <script type="text/javascript" src="js/main.js">
 
+    </script>
   </head>
   <body>
-    <style>
-      html{
-        background: #000;
-      }
-    </style>
     <a-scene>
-      <a-assets>  
-        <img  id="cardboard" src="../images/cardboard.png">
-        <img  id="headphones"  src="../images/headphones.png">
-        <img  id="rotation" src="../images/rotation.png">
-        <a-mixin id="font" text="font: Muli"></a-mixin>
+      <a-assets>
+        <img id="puerta-noche" src="assets/photos/puerta-noche.jpg">
+        <img id="puerta-dia" src="assets/photos/puerta-dia.jpg">
+        <img id="adentro-noche" src="assets/photos/adentro-noche.jpg">
+        <img id="adentro-dia" src="assets/photos/adentro-dia.jpg">
       </a-assets>
-
-
-
-
-
-
-
-
-
-
-
-    <a-image src="#headphones" opacity="0"  position="0 3 -3">
-      <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="5000">
-               </a-animation>
-      <a-animation 
-            attribute="opacity" 
-              from="1" 
-              to="0" 
-              begin="5000"
-              dur="5000">
-                </a-animation>
-            <a-animation attribute="visible" begin="10000" to="false"></a-animation>
-
-              <a-animation attribute="rotation"
-               dur="5000"
-               fill="forwards"
-               to="0 360 0" 
-               repeat="2"></a-animation>
-       </a-image>
-
-       <a-image src="#cardboard" visibiity="false" opacity="0"  position="0 3 -3">
-         <a-animation attribute="visible" begin="10000" to="true"></a-animation>
-
-      <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="10000"
-              dur="5000">
-               </a-animation>
-      <a-animation 
-            attribute="opacity" 
-              from="1" 
-              to="0" 
-              begin="15000"
-              dur="5000">
-                </a-animation>
-                <a-animation attribute="visible" begin="20000" to="false"></a-animation>
-
-                <a-animation attribute="rotation"
-                 begin="10000"
-               dur="5000"
-               fill="forwards"
-               to="0 360 0"
-               repeat="3"></a-animation>
-       </a-image>
-       <a-image src="#rotation" visibiity="false" opacity="0"  position="0 3 -3">
-         <a-animation attribute="visible" begin="20000" to="true"></a-animation>
-
-      <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="20000"
-              dur="5000">
-               </a-animation>
-      <a-animation 
-            attribute="opacity" 
-              from="1" 
-              to="0" 
-              begin="25000"
-              dur="5000">
-          </a-animation>
-                <a-animation attribute="visible" begin="30000" to="false"></a-animation>
-
-                <a-animation attribute="rotation"
-                 begin="20000"
-               dur="5000"
-               fill="forwards"
-               to="0 360 0"
-               repeat="3"></a-animation>
-       </a-image>
-
-      
-
-  
-
-<a-plane text="text: Vas a poder moverte libremente todo el tiempo;
- size:0.15" visibiity="false" 
-      mixin="font" opacity="0" color="white" position="-2 2 -3">
-        <a-animation attribute="visible" begin="20000" to="true"></a-animation>
-        <a-animation attribute="opacity" from="0" to="1" 
-         begin="20000" dur="5000">
+      <a-sky src="#puerta-dia" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#puerta-dia;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="0" dur="1000">
         </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="25000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="30000" to="false"></a-animation>
-  </a-plane>
-  
+        <a-animation attribute="opacity" from="1" to="0" begin="29000" dur="5000">
+        </a-animation>
+      </a-sky>
+      <a-sky src="#adentro-dia" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#adentro-dia;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="29000" dur="5000">
+        </a-animation>
+        <a-animation attribute="opacity" from="1" to="0" begin="85000" dur="5000">
+        </a-animation>
+      </a-sky>
 
-   <a-plane text="text: Coloca tu telefono en el Cardboard;
- size:0.15" 
-      mixin="font" opacity="0" visibiity="false" color="white" position="-1.75 2 -3">
-        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
-        <a-animation attribute="opacity" from="0" to="1" 
-         begin="10000" dur="5000">
+      <a-sky src="#adentro-noche" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#adentro-noche;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="85000" dur="5000">
         </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="15000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="20000" to="false"></a-animation>
+        <a-animation attribute="opacity" from="1" to="0" begin="120000" dur="5000">
+        </a-animation>
+      </a-sky>
+      <a-sky src="#puerta-noche" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#puerta-noche;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="120000" dur="5000">
+        </a-animation>
+      </a-sky>
+      <a-entity id="chichoVF3" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/chichoVF3.mp3;"></a-entity>
+      <a-entity id="chichoVF" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/chichoVF.mp3;"></a-entity>
+      <a-entity id="chicho2" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/chicho2.mp3;"></a-entity>
+      <a-entity id="busquetVF5" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/busquetVF5.mp3;"></a-entity>
+      <a-entity id="busquetVF4" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/busquetVF4.mp3;"></a-entity>
+      <a-entity id="busquetVF3" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/busquetVF3.mp3;"></a-entity>
 
-      </a-plane>
-       
-       <a-plane text="text: Ponete auriculares para una mejor experiencia;
- size:0.15" 
-      mixin="font" opacity="0" visibiity="false" color="white" position="-2.25 2 -3">
-        <a-animation attribute="opacity" from="0" to="1" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="5000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="10000" to="false"></a-animation>
-      </a-plane>
-
-      <a-plane text="text: Miradas 360 #1;" 
-      mixin="font"
-      position="-2.2 2 -3" opacity="0" visibiity="false" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="35000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="40000" to="false"></a-animation>
-      </a-plane>
-       <a-plane text="text: 03 - TITULO DE LA PRODUCCION ;" visibiity="false"  position="-2.2 1 -3" opacity="0" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="35000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="40000" to="false"></a-animation>
-      </a-plane>
-
-      <a-plane text="text: Miradas 360 #1;" 
-      mixin="font"
-      position="-2.2 2 -3" opacity="0" visibiity="false" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="45000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="45000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="50000" to="false"></a-animation>
-      </a-plane>
-       <a-plane text="text: 03- TITULO DE LA PRODUCCION;" visibiity="false"  position="-2.2 1 -3" opacity="0" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="45000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="45000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="50000" to="false"></a-animation>
-      </a-plane>
-       
-
-
-  <a-plane text="text:Montado y Desarrollado entre Julio y Agosto 2016 ;size:0.15" visibiity="false"  
-       position="-3 3 -3" opacity="0"  color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text: en Locacion nombre;size:0.15" visibiity="false"  
-       position="-3 2.5 -3" opacity="0"  color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text: Guion y produccion general: ;size:0.15" visibiity="false"  
-       position="-3 2 -3" opacity="0"  color="white">
-         <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text:  Mentoria, visuales e imagenes: ;size:0.15" visibiity="false"  
-       position="-3 1.5 -3" opacity="0"  color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text: Montaje y programacion: ;size:0.15" visibiity="false"  
-       position="-3 1 -3" opacity="0"  color="white">
-         <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-
-
-
-      
-    
       <a-camera position="0 1.8 1.5"></a-camera>
     </a-scene>
   </body>
 </html>
-
