@@ -270,12 +270,6 @@
        <a-animation attribute="visible" begin="40000" to="false"></a-animation>
       </a-plane>
 
- <a-entity id="first" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:01-beccar.mp3; loop:false; on:playfirst"></a-entity>
- <a-entity id="bosch" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:03-bosch.mp3; loop:false; on:playbosch"></a-entity>
- <a-entity id="adios" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:04-adios.mp3; loop:false; on:playadios"></a-entity>
- <a-entity id="devoto" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:02-01-devoto.mp3; loop:false; on:playDevoto"></a-entity>
- <a-entity id="soundtrack" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:soundtrack.mp4; loop:true;autoplay:true;"></a-entity> 
-      
 
 
       <!-- Cielos -->
@@ -809,7 +803,18 @@
 
       
     
-      <a-camera id="miradas-cam" position="0 1.8 1.5"></a-camera>
+      <a-camera id="miradas-cam" position="0 1.8 1.5">
+
+
+       <a-entity id="first" geometry="primitive: plane" material="color: blue"  sound="src:01-beccar.mp3; loop:false; on:playfirst"></a-entity>
+ <a-entity id="bosch" geometry="primitive: plane" material="color: blue" sound="src:03-bosch.mp3; loop:false; on:playbosch"></a-entity>
+ <a-entity id="adios" geometry="primitive: plane" material="color: blue" sound="src:04-adios.mp3; loop:false; on:playadios"></a-entity>
+ <a-entity id="devoto" geometry="primitive: plane" material="color: blue"  sound="src:02-01-devoto.mp3; loop:false; on:playDevoto"></a-entity>
+ <a-entity id="soundtrack" geometry="primitive: plane" material="color: blue"  sound="src:soundtrack.mp4; loop:true;autoplay:true;"></a-entity> 
+      
+
+
+      </a-camera>
     </a-scene>
   </body>
      <script src="app.js"></script>
