@@ -15,7 +15,7 @@ var createPlayerFor = function(selector){
 
 
 
-var players = ['#first','#devoto'];
+var players = ['#first','#devoto','#bosch','#adios'];
 for (var i = 0; i < players.length; i++) {
 	createPlayerFor(players[i]);
 };
