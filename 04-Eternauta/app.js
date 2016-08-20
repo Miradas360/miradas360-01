@@ -6,8 +6,8 @@ var createPlayerFor = function(selector){
 	var playerAnimationTrigger = document.querySelector('#' + playSelector);
 	var mainEventPlay = function(){
 		audioToPlay.emit('play' + selector);
+		
 	};
-	playerAnimationTrigger.el.addEventListener('animationend',mainEventPlay);
 	playerAnimationTrigger.addEventListener('animationend',mainEventPlay);
 }
 
