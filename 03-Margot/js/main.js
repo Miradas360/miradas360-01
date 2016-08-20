@@ -21,8 +21,8 @@ let init = () => {
 	var busquetVF4 = document.querySelector('#busquetVF4');
 	var busquetVF3 = document.querySelector('#busquetVF3');
 	circulo.addEventListener('click', () => {
-		document.querySelector('#circulo').style.display = 'none';
-		document.querySelector('#circulo').style.visibility = 'hidden';
+		document.querySelector('#circulo').emit('hideMeNow');
+		
 		escena2.dispatchEvent(customEvents.start.escena2)
 		chichoVF3.components.sound.stop()
 	})

@@ -52,6 +52,8 @@
       <a-entity id="circulo" cursor="fuse: true; maxDistance: 30;
             timeout: 500" position="12 3 -20" geometry="primitive: plane; height: 2; width: 2" material="opacity:0.5591555555555462;transparent:true;src:#circle;side:double"
             raycaster="" scale="1.2007037037037116 1.2007037037037116 1.2007037037037116">
+        <a-animation attribute="visible" begin="hideMeNow" to="false"></a-animation>
+    
         <a-animation fill="both" attribute="material.opacity" easing="ease-in-out" to="0.5" from="0.8" dur="3000" repeat="indefinite"></a-animation>
 
         <a-animation fill="both" attribute="scale" easing="ease-in-out" to="1.25 1.25 1.25" dur="3000" repeat="indefinite"></a-animation>
