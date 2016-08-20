@@ -16,28 +16,31 @@
         <img id="puerta-dia" src="assets/photos/puerta-dia.jpg">
         <img id="adentro-noche" src="assets/photos/adentro-noche.jpg">
         <img id="adentro-dia" src="assets/photos/adentro-dia.jpg">
+        <img id="circle" src="assets/photos/nyancat.png">
+
       </a-assets>
-      <a-sky src="#puerta-dia" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#puerta-dia;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
-        <a-animation attribute="opacity" from="0" to="1" begin="0" dur="1000">
+      <a-sky id="escena1" src="#puerta-dia" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#puerta-dia;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="escena1" dur="1000">
         </a-animation>
-        <a-animation attribute="opacity" from="1" to="0" begin="29000" dur="5000">
-        </a-animation>
-      </a-sky>
-      <a-sky src="#adentro-dia" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#adentro-dia;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
-        <a-animation attribute="opacity" from="0" to="1" begin="29000" dur="5000">
-        </a-animation>
-        <a-animation attribute="opacity" from="1" to="0" begin="85000" dur="5000">
+        <a-animation attribute="opacity" from="1" to="0" begin="escena2" dur="5000">
         </a-animation>
       </a-sky>
 
-      <a-sky src="#adentro-noche" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#adentro-noche;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
-        <a-animation attribute="opacity" from="0" to="1" begin="85000" dur="5000">
+      <a-sky id="escena2" src="#adentro-dia" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#adentro-dia;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="escena2" dur="5000">
         </a-animation>
-        <a-animation attribute="opacity" from="1" to="0" begin="120000" dur="5000">
+        <a-animation attribute="opacity" from="1" to="0" begin="escena3" dur="5000">
         </a-animation>
       </a-sky>
-      <a-sky src="#puerta-noche" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#puerta-noche;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
-        <a-animation attribute="opacity" from="0" to="1" begin="120000" dur="5000">
+
+      <a-sky id='escena3' src="#adentro-noche" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#adentro-noche;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="escena3" dur="5000">
+        </a-animation>
+        <a-animation attribute="opacity" from="1" to="0" begin="escena4" dur="5000">
+        </a-animation>
+      </a-sky>
+      <a-sky id='escena4' src="#puerta-noche" rotation="0 -130 0" material="color:#FFF;shader:flat;src:#puerta-noche;opacity:1" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64" scale="-1 1 1" opacity="0">
+        <a-animation attribute="opacity" from="0" to="1" begin="escena4" dur="5000">
         </a-animation>
       </a-sky>
       <a-entity id="chichoVF3" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/chichoVF3.mp3;"></a-entity>
@@ -46,8 +49,25 @@
       <a-entity id="busquetVF5" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/busquetVF5.mp3;"></a-entity>
       <a-entity id="busquetVF4" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/busquetVF4.mp3;"></a-entity>
       <a-entity id="busquetVF3" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src: assets/audios/busquetVF3.mp3;"></a-entity>
+      <a-entity id="circulo" cursor="fuse: true; maxDistance: 30;
+            timeout: 500" position="12 3 -20" geometry="primitive: plane; height: 2; width: 2" material="opacity:0.5591555555555462;transparent:true;src:#circle;side:double"
+            raycaster="" scale="1.2007037037037116 1.2007037037037116 1.2007037037037116">
+        <a-animation fill="both" attribute="material.opacity" easing="ease-in-out" to="0.5" from="0.8" dur="3000" repeat="indefinite"></a-animation>
 
-      <a-camera position="0 1.8 1.5"></a-camera>
+        <a-animation fill="both" attribute="scale" easing="ease-in-out" to="1.25 1.25 1.25" dur="3000" repeat="indefinite"></a-animation>
+
+      </a-entity>
+      <a-camera position="0 1.8 1.5" camera="active:true" look-controls="" wasd-controls="" rotation="0 0 0">
+        <a-entity position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.20; radiusInner: 0.10;"
+                                    material="color: white; shader: flat"
+                                    cursor="maxDistance: 30; fuse: true" raycaster="">
+              <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+              <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+              
+              </a-animation>
+        </a-entity>
+  	   </a-camera>
+      <!-- <a-camera position="0 1.8 1.5"></a-camera> -->
     </a-scene>
   </body>
 </html>
