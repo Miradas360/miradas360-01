@@ -1,170 +1,544 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Borges VR</title>
-    <meta name="description" content="Borges VR">
-    <script src="js/aframe.min.js"></script>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Pasaje a Borges VR</title>
+  <meta name="description" content="Pasaje a Borges VR">
+  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+  <script src="js/droid_sans_mono_regular.typeface.js"></script>
+</head>
+<body>
 
-    <a-scene>
+  <a-scene>
 
-      <a-assets>
+  <a-assets>
 
-        <img id="bgEscena1" src="img/bgEscena1.jpg">
-        <img id="bgEscena2" src="img/bgEscena2.jpg">
-        <img id="bgEscena3" src="img/bgEscena3.jpg">
-        <img id="bgEscena4" src="img/bgEscena4.jpg">
+  <img  id="cardboard" src="img/cardboard.png">
+  <img  id="headphones"  src="img/headphones.png">
+  <img  id="rotation" src="img/rotation.png">
 
-        <img id="pathEscena1" src="img/pathEscena1.png">
-        <img id="tituloEscena1" src="img/tituloEscena1.png">
+  <img  id="intro" src="img/intro.jpg">  
 
-        <img id="pathEscena2" src="img/pathEscena2.png">
-        <img id="tituloEscena2" src="img/tituloEscena2.png">
+  <img id="pathEscena1" src="img/pathEscena1.png">
+  <img id="bgEscena1" src="img/bgEscena1.jpg">
 
-        <img id="pathEscena3" src="img/pathEscena3.png">
-        <img id="tituloEscena3" src="img/tituloEscena3.png">
+  <img id="pathEscena2" src="img/pathEscena2.png">
+  <img id="bgEscena2" src="img/bgEscena2.jpg">
 
-        <img id="pathEscena4" src="img/pathEscena4.png">
-        <img id="tituloEscena4" src="img/tituloEscena4.png">
+  <img id="pathEscena3" src="img/pathEscena3.png">
+  <img id="bgEscena3" src="img/bgEscena3.jpg">
 
-      </a-assets>
+  <img id="pathEscena4" src="img/pathEscena4.png">
+  <img id="bgEscena4" src="img/bgEscena4.jpg">
 
-      <a-entity sound="src: sound/astor-piazzolla_luis-medina-castro_jorge-luis-borges--el-tango-1965.mp3; autoplay: true; volume: 0.2;"></a-entity>
+</a-assets>
 
-      <a-entity position="0 2.2 4">
-        <a-entity id="camara" camera look-controls wasd-controls>
-          <a-cursor color="#2E3A87">
-          <a-image id="path" position="-2.8 0 -1" rotation="0 0 0" width="0.5" height="2" src="#pathEscena1" ></a-image>
-          <a-image id="titulo" position="0 -1.5 -1" rotation="0 0 0" width="4" height="1" src="#tituloEscena1" ></a-image>
-        </a-entity>
-      </a-entity>
+<a-sky color="#000"></a-sky>
+<a-entity sound="src: sound/astor-piazzolla_luis-medina-castro_jorge-luis-borges--el-tango-1965.mp3; autoplay: true; volume: 1; loop:true;"></a-entity>
 
-      <a-sphere class="escena" src="#bgEscena1" radius="1">
-        <a-animation attribute="scale" direction="alternate" dur="4000" easing="ease-in" from="0 0 0" to="10 10 -10" repeat="0"></a-animation>
-        <a-animation attribute="position" direction="alternate" dur="4000" easing="ease-out" from="0 1.5 -12" to="0 1.5 0" repeat="0"></a-animation>
-        <a-animation attribute="rotation" direction="alternate" dur="5000" easing="ease-out" from="-180 0 0" to="0 350 0" repeat="0"></a-animation>
-        <a-entity sound="src: sound/audio-1_borges.mp3; autoplay: true; volume: 3;" position="-2 1.2 0"></a-entity>
-      </a-sphere>
+<a-entity position="0 2.2 4">
+<a-entity id="camara" camera look-controls wasd-controls>
 
-      <a-sphere class="escena" src="#bgEscena2" radius="1" rotation="0 -90 0" position="0 10 0" scale="0 0 0"></a-sphere>
+<a-image id="path" position="-1 0 -2" rotation="0 0 0" width=".12" height=".8" src="" scale="0 0 0"></a-image>
 
-      <a-sphere class="escena" src="#bgEscena3" radius="1" rotation="0 -90 0" position="0 0 0" scale="0 0 0"></a-sphere>
+<a-cursor id="cursor" opacity="0" color="#2E3A87">
+<a-entity id="audio" position="0 0 0"></a-entity>
 
-      <a-sphere class="escena" src="#bgEscena4" radius="1" position="0 0 15" scale="0 0 0"></a-sphere>
+<!-- intro -->    
 
-      <a-torus id="portal" position="5 -.5 3.8" rotation="0 90 0" color="red" opacity=".4" segments-radial="4" segments-tubular="100" radius=".6" radius-tubular="0.02" scale="0 0 0">
-        <a-sphere id="gatillo" position="0 0 0" color="red;" opacity=".2" radius=".1">
-          <a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" to=".3" repeat="indefinite"></a-animation>
-        </a-sphere>
-      </a-torus>
+<a-image src="#headphones" opacity="0"  position="0 0 -6">
+<a-animation 
+attribute="opacity" 
+from="0" 
+to="1" 
+begin="0"
+dur="5000">
+</a-animation>
+<a-animation 
+attribute="opacity" 
+from="1" 
+to="0" 
+begin="5000"
+dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="10000" to="false"></a-animation>
+<a-animation attribute="rotation"
+dur="5000"
+fill="forwards"
+to="0 360 0" 
+repeat="2"></a-animation>
+</a-image>
 
-    </a-scene>
+<a-image src="#cardboard" visibiity="false" opacity="0"  position="0 0 -6">
+<a-animation attribute="visible" begin="10000" to="true"></a-animation>
+<a-animation 
+attribute="opacity" 
+from="0" 
+to="1" 
+begin="10000"
+dur="5000">
+</a-animation>
+<a-animation 
+attribute="opacity" 
+from="1" 
+to="0" 
+begin="15000"
+dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="20000" to="false"></a-animation>
+<a-animation attribute="rotation"
+begin="10000"
+dur="5000"
+fill="forwards"
+to="0 360 0"
+repeat="3">
+</a-animation>
+</a-image>
 
-    <script>
+<a-image src="#rotation" visibiity="false" opacity="0"  position="0 0 -6">
+<a-animation attribute="visible" begin="20000" to="true"></a-animation>
+<a-animation 
+attribute="opacity" 
+from="0" 
+to="1" 
+begin="20000"
+dur="5000">
+</a-animation>
+<a-animation 
+attribute="opacity" 
+from="1" 
+to="0" 
+begin="25000"
+dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="30000"   to="false"></a-animation>
+<a-animation attribute="rotation"
+begin="20000"
+dur="5000"
+fill="forwards"
+to="0 360 0"
+repeat="3"></a-animation>
+</a-image>
 
-      var escenaNro = 0;
+<a-plane text="text: Ponete auriculares para una mejor experiencia; size:0.15; font: Droid Sans Mono;" opacity="0" visibiity="false" color="white" position="-2.7 -1 -6">
+<a-animation attribute="opacity" from="0" to="1" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="5000" dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="10000" to="false"></a-animation>
+</a-plane>
 
-      var transiciones = {
+<a-plane text="text: Coloca tu teléfono en el Cardboard; size:0.15; font: Droid Sans Mono;" opacity="0" visibiity="false" color="white" 
+position="-2 -1 -6">
+<a-animation attribute="visible" begin="10000" to="true"></a-animation>
+<a-animation attribute="opacity" from="0" to="1" 
+begin="10000" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="15000" dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="20000" to="false"></a-animation>
+</a-plane>
 
-        transicion1:{
-          animEscenaSale:
-          '<a-animation attribute="scale" begin="1500" dur="0" easing="linear" to="0 0 0" repeat="0"></a-animation>',
-          animEscenaEntra:
-          '<a-animation attribute="scale" dur="0" easing="linear" to="9 9 -9" repeat="0"></a-animation>' + 
-          '<a-animation attribute="position" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
-          posPortal: [-3.5, -2, 5],
-          rotPortal: [15, -48, 0],
-          pathSrc: '#pathEscena2',
-          tituloSrc: '#tituloEscena2',
-          audioSrc: '<a-entity sound="src: sound/audio-2_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
-        },
+<a-plane text="text: Vas a poder moverte libremente todo el tiempo; size:0.15; font: Droid Sans Mono;" visibiity="false" opacity="0" color="white" position="-2.7 -1 -6">
+<a-animation attribute="visible" begin="20000" to="true"></a-animation>
+<a-animation attribute="opacity" from="0" to="1" 
+begin="20000" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="25000" dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="30000" to="false"></a-animation>
+</a-plane>
 
-        transicion2:{
-          animEscenaSale:
-          '<a-animation attribute="scale" begin="1500" dur="0" easing="linear" to="0 0 0" repeat="0"></a-animation>',
-          animEscenaEntra:
-          '<a-animation attribute="scale" direction="alternate" dur="2000" easing="linear" to="9 9 -9" repeat="0"></a-animation>' +
-          '<a-animation attribute="position" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
-          posPortal: [0, 2.2, 1],
-          rotPortal: [0, 0, 0],
-          pathSrc: '#pathEscena3',
-          tituloSrc: '#tituloEscena3',
-          audioSrc: '<a-entity sound="src: sound/audio-3_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
-        },
+<a-plane src="#intro" opacity="0" visibility="false" width="5" height="2.8" position="0 0 -3">
+<a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="35000" dur="5000">
+</a-animation>
+<a-animation id="start" attribute="visible" begin="40000" to="false"></a-animation>
+</a-plane>
 
-        transicion3:{
-          animEscenaSale:
-          '<a-animation attribute="material.opacity" direction="alternate" dur="1000" easing="linear" to="0" repeat="0"></a-animation>',
-          animEscenaEntra:
-          '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation>' +
-          '<a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
-          posPortal: [1, 1, 1],
-          rotPortal: [0, 0, 0],
-          pathSrc: '#pathEscena4',
-          tituloSrc: '#tituloEscena4',
-          audioSrc: '<a-entity sound="src: sound/audio-4_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
-        },
+<!-- cierre -->
 
-        transicion4:{
-          animEscenaSale:
-          '<a-animation attribute="scale" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>' + 
-          '<a-animation attribute="position"  direction="alternate" dur="2000" easing="linear" to="15 0 -9" repeat="0"></a-animation>',
-          animEscenaEntra:
-          '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation>' +
-          '<a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
-          posPortal: [1, 1, 1],
-          rotPortal: [0, 0, 0],
-          pathSrc: '#pathEscena1',
-          tituloSrc: '#tituloEscena1',
-          audioSrc: '<a-entity sound="src: sound/audio-1_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
-        }    
-      };
+<a-plane id="tituloCierre" text="text:Pasaje a Borges; font: Droid Sans Mono;" visibility="false" position="-3 2 -6" opacity="0" color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Montado y Desarrollado entre julio y agosto de 2016; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 2 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:En Antigua Biblioteca Nacional, Monserrat, Buenos Aires; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 1.5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Guion y producción general: Fernanda Ibañez; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 1 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Mentoria: Gia Castello; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 .5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Montaje y programación: Adriel Sebastian Zarate; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 0 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
 
-      function cambioEscena(){
-        var posicion = Object.keys(transiciones)[escenaNro];
-        escenaNro++;
-        aEscena(
-          transiciones[posicion].animEscenaSale,
-          transiciones[posicion].animEscenaEntra,
-          transiciones[posicion].posPortal,
-          transiciones[posicion].rotPortal,
-          transiciones[posicion].pathSrc,
-          transiciones[posicion].tituloSrc,
-          transiciones[posicion].audioSrc
-        );
+</a-entity>
+</a-entity>
+
+<a-sphere class="escena" src="#bgEscena1" radius="1" position="0 1.5 -12" scale="0 0 0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena2" radius="1" rotation="0 10 0" position="0 10 0" scale="0 0 0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena3" radius="1" rotation="0 -90 0" position="0 0 0" scale="0 0 0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena4" radius="1" position="0 0 15" scale="0 0 0"></a-sphere>
+
+<a-plane id="subtitulo1" text="" color="white"></a-plane>
+<a-plane id="subtitulo2" text="" color="white"></a-plane>
+<a-plane id="subtitulo3" text="" color="white"></a-plane>
+<a-plane id="subtitulo4" text="" color="white"></a-plane>
+<a-plane id="subtitulo5" text="" color="white"></a-plane>
+<a-plane id="subtitulo6" text="" color="white"></a-plane>
+<a-plane id="subtitulo7" text="" color="white"></a-plane>
+
+<a-torus id="portal" position="5 -.5 3.8" rotation="0 90 0" color="red" opacity=".4" segments-radial="4" segments-tubular="100" radius=".6" radius-tubular="0.02" scale="0 0 0">
+<a-sphere id="gatillo" position="0 0 0" color="red;" opacity=".2" radius=".1">
+<a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" to=".3" repeat="indefinite"></a-animation>
+</a-sphere>
+</a-torus>
+
+</a-scene>
+
+<script>
+
+  var escenaNro = 0;
+
+  var transiciones = {
+
+    transicion1:{
+      animEscenaSale:'',
+      animEscenaEntra:
+      '<a-animation attribute="scale" direction="alternate" dur="4000" easing="ease-in" from="0 0 0" to="10 10 -10" repeat="0"></a-animation>' + 
+      '<a-animation attribute="position" direction="alternate" dur="4000" easing="ease-out" from="0 1.5 -12" to="0 1.5 0" repeat="0"></a-animation>' + 
+      '<a-animation attribute="rotation" direction="alternate" dur="5000" easing="ease-out" from="-260 0 0" to="0 430 0" repeat="0"></a-animation>',
+      posPortal: [3, 0, -2.5],
+      rotPortal: [0, -20, 0],
+      pathSrc: '#pathEscena1',
+
+      contSubtitulo1: 'Antigua Biblioteca Nacional',
+      contSubtitulo2: 'México 564, Monserrat',
+      contSubtitulo3: 'Buenos Aires.',
+      contSubtitulo4: '',
+      contSubtitulo5: '',
+      contSubtitulo6: '',
+      contSubtitulo7: '',
+      posSubtitulo1:[-1.5, 3, -2],
+      posSubtitulo2:[-1.2, 2.5, -3],
+      posSubtitulo3:[-.8, 2, -3],
+      posSubtitulo4:[0, 0, 0],
+      posSubtitulo5:[0, 0, 0],
+      posSubtitulo6:[0, 0, 0],
+      posSubtitulo7:[0, 0, 0],
+      rotSubtitulo1:[0, 0, 0],
+      rotSubtitulo2:[0, 0, 0],
+      rotSubtitulo3:[0, 0, 0],
+      rotSubtitulo4:[0, 0, 0],
+      rotSubtitulo5:[0, 0, 0],
+      rotSubtitulo6:[0, 0, 0],
+      rotSubtitulo7:[0, 0, 0],
+
+      audioSrc: '<a-entity sound="src: sound/audio-1_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+    },
+
+    transicion2:{
+      animEscenaSale:
+      '<a-animation attribute="scale" begin="1500" dur="0" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="scale" dur="0" easing="linear" to="9 9 -9" repeat="0"></a-animation>' + 
+      '<a-animation attribute="position" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+      posPortal: [4, -2, 4.2],
+      rotPortal: [0, 80, 0],
+      pathSrc: '#pathEscena2',
+
+      contSubtitulo1: 'Fue inaugurada en 1902 por el',
+      contSubtitulo2: 'presidente Julio Argentino Roca.',
+
+      contSubtitulo3: 'El edificio originalmente fue',
+      contSubtitulo4: 'creado para ubicar a la',
+      contSubtitulo5: 'Lotería de Beneficencia.',
+      contSubtitulo6: 'Por eso, hasta ahora, la escalera',
+      contSubtitulo7: 'está decorada con bolilleros.',
+      posSubtitulo1:[0.5, 3, -2],
+      posSubtitulo2:[0.5, 2.5, -2],
+      posSubtitulo3:[6, 1, 0],
+      posSubtitulo4:[6, .5, 0],
+      posSubtitulo5:[6, 0, 0],
+      posSubtitulo6:[6, -.5, 0],
+      posSubtitulo7:[6, -1, 0],
+      rotSubtitulo1:[0, -17, 0],
+      rotSubtitulo2:[0, -17, 0],
+      rotSubtitulo3:[0, -60, 0],
+      rotSubtitulo4:[0, -60, 0],
+      rotSubtitulo5:[0, -60, 0],
+      rotSubtitulo6:[0, -60, 0],
+      rotSubtitulo7:[0, -60, 0],
+
+      audioSrc: '<a-entity sound="src: sound/audio-2_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+    },
+
+    transicion3:{
+      animEscenaSale:
+      '<a-animation attribute="opacity" dur="1500" easing="linear" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="scale" direction="alternate" dur="2000" easing="linear" to="9 9 -9" repeat="0"></a-animation>' +
+      '<a-animation attribute="position" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+      posPortal: [-8, 0, 2],
+      rotPortal: [0, 90, 0],
+      pathSrc: '#pathEscena3',
+
+      contSubtitulo1: 'En 1955, Jorge Luis Borges fue nombrado',
+      contSubtitulo2: 'director de la biblioteca.',
+      contSubtitulo3: 'Trabajó en este lugar durante 18 años.',
+      contSubtitulo4: '',
+      contSubtitulo5: '',
+      contSubtitulo6: '',
+      contSubtitulo7: '',
+      posSubtitulo1:[-2.8, 2.3, 0],
+      posSubtitulo2:[-2, 2, 0],
+      posSubtitulo3:[-2.7, 1.7, 0],
+      posSubtitulo4:[0, 0, 0],
+      posSubtitulo5:[0, 0, 0],
+      posSubtitulo6:[0, 0, 0],
+      posSubtitulo7:[0, 0, 0],
+      rotSubtitulo1:[0, 0, 0],
+      rotSubtitulo2:[0, 0, 0],
+      rotSubtitulo3:[0, 0, 0],
+      rotSubtitulo4:[0, 0, 0],
+      rotSubtitulo5:[0, 0, 0],
+      rotSubtitulo6:[0, 0, 0],
+      rotSubtitulo7:[0, 0, 0],
+
+      audioSrc: '<a-entity sound="src: sound/audio-3_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+    },
+
+    transicion4:{
+      animEscenaSale:
+      '<a-animation attribute="material.opacity" direction="alternate" begin="2000" dur="1000" easing="linear" to="0" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="scale" direction="alternate" dur="3000" easing="linear" to="10 10 -10" repeat="0"></a-animation>' +
+      '<a-animation attribute="position" direction="alternate" dur="3000" easing="linear" to="0 0 0" repeat="0"></a-animation>',
+      posPortal: [.8, 0, -8],
+      rotPortal: [0, 0, 0],
+      pathSrc: '#pathEscena4',
+
+      contSubtitulo1: 'Mirá con atención.',
+      contSubtitulo2: 'En uno de los anaqueles de',
+      contSubtitulo3: 'esta sala puede estar',
+      contSubtitulo4: '“El libro de arena”.',
+      contSubtitulo5: '',
+      contSubtitulo6: '',
+      contSubtitulo7: '',
+      posSubtitulo1:[3, 2, 2],
+      posSubtitulo2:[5, 1.5, .8],
+      posSubtitulo3:[5, 1, 1.1],
+      posSubtitulo4:[5, .5, 1.1],
+      posSubtitulo5:[0, 0, 0],
+      posSubtitulo6:[0, 0, 0],
+      posSubtitulo7:[0, 0, 0],
+      rotSubtitulo1:[0, -75, 0],
+      rotSubtitulo2:[0, -75, 0],
+      rotSubtitulo3:[0, -75, 0],
+      rotSubtitulo4:[0, -75, 0],
+      rotSubtitulo5:[0, 0, 0],
+      rotSubtitulo6:[0, 0, 0],
+      rotSubtitulo7:[0, 0, 0],
+
+      audioSrc: '<a-entity sound="src: sound/audio-4_borges.mp3; autoplay: true; volume: 3;"></a-entity>'
+    },
+
+    transicion5:{
+      animEscenaSale:
+      '<a-animation attribute="scale" direction="alternate" dur="2000" easing="linear" to="0 0 0" repeat="0"></a-animation>' + 
+      '<a-animation attribute="position"  direction="alternate" dur="2000" easing="linear" to="15 0 -9" repeat="0"></a-animation>',
+      animEscenaEntra:'',
+      posPortal: [0, 0, 0],
+      rotPortal: [0, 0, 0],
+      pathSrc: '',
+      contSubtitulo1: 'Mirá con atención.',
+      contSubtitulo2: 'En uno de los anaqueles de',
+      contSubtitulo3: 'esta sala puede estar',
+      contSubtitulo4: '“El libro de arena”.',
+      contSubtitulo5: '',
+      contSubtitulo6: '',
+      contSubtitulo7: '',
+      posSubtitulo1:[0, 0, 0],
+      posSubtitulo2:[0, 0, 0],
+      posSubtitulo3:[0, 0, 0],
+      posSubtitulo4:[0, 0, 0],
+      posSubtitulo5:[0, 0, 0],
+      posSubtitulo6:[0, 0, 0],
+      posSubtitulo7:[0, 0, 0],
+      rotSubtitulo1:[0, 0, 0],
+      rotSubtitulo2:[0, 0, 0],
+      rotSubtitulo3:[0, 0, 0],
+      rotSubtitulo4:[0, 0, 0],
+      rotSubtitulo5:[0, 0, 0],
+      rotSubtitulo6:[0, 0, 0],
+      rotSubtitulo7:[0, 0, 0],
+      audioSrc: ''
+    }
+
+  };
+
+  function cambioEscena(){
+
+    console.log('escenaNro ' + escenaNro);
+
+    cursor.setAttribute('opacity', 1);
+    portal.setAttribute('scale', { x: 0, y: 0, z: 0 });
+
+    if ( escenaNro === 0 ) { setTimeout(function(){ path.setAttribute('scale', { x: 1, y: 1, z: 1 }); }, 5000); }
+
+    if ( escenaNro === 4 ) {
+
+      cursor.setAttribute('opacity', 0);
+      path.setAttribute('scale', { x: 0, y: 0, z: 0 });
+
+      subtitulo1.setAttribute('scale', { x: 0, y: 0, z: 0 });
+      subtitulo2.setAttribute('scale', { x: 0, y: 0, z: 0 });
+      subtitulo3.setAttribute('scale', { x: 0, y: 0, z: 0 });
+      subtitulo4.setAttribute('scale', { x: 0, y: 0, z: 0 });
+
+      var posicion = Object.keys(transiciones)[escenaNro];
+      document.getElementsByClassName("escena")[(escenaNro - 1)].innerHTML = transiciones[posicion].animEscenaSale;
+
+      tituloCierre.setAttribute('scale', {x: 1, y: 1, z: 1});
+      tituloCierre.innerHTML = 
+      '<a-animation attribute="opacity" from="0" to="1" dur="5000"></a-animation>' +
+      '<a-animation attribute="opacity" from="1" to="0" begin="5000" dur="5000"></a-animation>';
+
+      var cierres = document.querySelectorAll('.cierre');
+      for (var i = 0; i < cierres.length; i++) {
+        cierres[i].setAttribute('scale', {x: 1, y: 1, z: 1});
+        cierres[i].innerHTML = 
+        '<a-animation attribute="opacity" from="0" to="1" begin="10000" dur="5000"></a-animation>' +
+        '<a-animation attribute="visible" begin="10000" to="true"></a-animation>' +
+        '<a-animation attribute="opacity" from="1" to="0" begin="20000" dur="5000"></a-animation>';
       }
 
-      function mostrarPortal(){
-        portal.setAttribute('scale', { x: 1, y: 1, z: 1 });
-      }
+      return false;
+    }
+    
+    var posicion = Object.keys(transiciones)[escenaNro];
+    aEscena(
+      transiciones[posicion].animEscenaSale,
+      transiciones[posicion].animEscenaEntra,
+      transiciones[posicion].posPortal,
+      transiciones[posicion].rotPortal,
+      transiciones[posicion].pathSrc,
 
-      function aEscena(animEscenaSale, animEscenaEntra, posPortal, rotPortal, pathSrc, tituloSrc, audioSrc) {
-        document.getElementsByClassName("escena")[(escenaNro - 1)].innerHTML = animEscenaSale;
-        document.getElementsByClassName("escena")[escenaNro].innerHTML = animEscenaEntra + audioSrc;
-        path.setAttribute('src', pathSrc);
-        titulo.setAttribute('src', tituloSrc);
-        portal.setAttribute('scale', { x: 0, y: 0, z: 0 });
-        portal.setAttribute('position', { x: posPortal[0], y: posPortal[1], z: posPortal[2] });
-        portal.setAttribute('rotation', { x: rotPortal[0], y: rotPortal[1], z: rotPortal[2] });
-      }
+      transiciones[posicion].contSubtitulo1,
+      transiciones[posicion].contSubtitulo2,
+      transiciones[posicion].contSubtitulo3,
+      transiciones[posicion].contSubtitulo4,
+      transiciones[posicion].contSubtitulo5,
+      transiciones[posicion].contSubtitulo6,
+      transiciones[posicion].contSubtitulo7,
 
-      portal.onmouseenter = function (e) {
-        gatillo.innerHTML = '<a-animation attribute="geometry.radius" dur="3000" easing="linear" from=".4" to=".6" repeat="0"></a-animation>';
-      };
+      transiciones[posicion].posSubtitulo1,
+      transiciones[posicion].posSubtitulo2,
+      transiciones[posicion].posSubtitulo3,
+      transiciones[posicion].posSubtitulo4,
+      transiciones[posicion].posSubtitulo5,
+      transiciones[posicion].posSubtitulo6,
+      transiciones[posicion].posSubtitulo7,
 
-      portal.onmouseleave = function (e) {
-        gatillo.innerHTML = '<a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" from=".2" to=".3" repeat="indefinite"></a-animation>';
-      };
+      transiciones[posicion].rotSubtitulo1,
+      transiciones[posicion].rotSubtitulo2,
+      transiciones[posicion].rotSubtitulo3,
+      transiciones[posicion].rotSubtitulo4,
+      transiciones[posicion].rotSubtitulo5,
+      transiciones[posicion].rotSubtitulo6,
+      transiciones[posicion].rotSubtitulo7,
 
-      portal.addEventListener('animationend', cambioEscena, false);
+      transiciones[posicion].audioSrc
+      );
+escenaNro++;
+}
 
-      for( var i in document.getElementsByClassName("escena") ){
-          document.getElementsByClassName("escena")[i].addEventListener('sound-ended', mostrarPortal, false);
-      }
+function mostrarPortal() {
+  portal.setAttribute('scale', { x: 1, y: 1, z: 1 });
+}
 
-    </script>
+function aEscena(animEscenaSale, animEscenaEntra, posPortal, rotPortal, pathSrc, 
 
-  </body>
+  contSubtitulo1, 
+  contSubtitulo2, 
+  contSubtitulo3, 
+  contSubtitulo4, 
+  contSubtitulo5, 
+  contSubtitulo6, 
+  contSubtitulo7, 
+
+  posSubtitulo1, 
+  posSubtitulo2, 
+  posSubtitulo3, 
+  posSubtitulo4, 
+  posSubtitulo5, 
+  posSubtitulo6, 
+  posSubtitulo7, 
+
+  rotSubtitulo1, 
+  rotSubtitulo2, 
+  rotSubtitulo3, 
+  rotSubtitulo4, 
+  rotSubtitulo5, 
+  rotSubtitulo6, 
+  rotSubtitulo7,
+
+  audioSrc) {
+
+  if ( escenaNro > 0 ) document.getElementsByClassName("escena")[(escenaNro - 1)].innerHTML = animEscenaSale;
+  document.getElementsByClassName("escena")[escenaNro].innerHTML = animEscenaEntra;
+
+  path.setAttribute('src', pathSrc);
+
+  subtitulo1.setAttribute('text', 'text:' + contSubtitulo1 + '; size:0.15; font: Droid Sans Mono;');
+  subtitulo1.setAttribute('position', { x: posSubtitulo1[0], y: posSubtitulo1[1], z: posSubtitulo1[2] });
+  subtitulo1.setAttribute('position', { x: posSubtitulo1[0], y: posSubtitulo1[1], z: posSubtitulo1[2] });
+  subtitulo1.setAttribute('rotation', { x: rotSubtitulo1[0], y: rotSubtitulo1[1], z: rotSubtitulo1[2] });
+
+  subtitulo2.setAttribute('text', 'text:' + contSubtitulo2 + '; size:0.15; font: Droid Sans Mono;');
+  subtitulo2.setAttribute('position', { x: posSubtitulo2[0], y: posSubtitulo2[1], z: posSubtitulo2[2] });
+  subtitulo2.setAttribute('rotation', { x: rotSubtitulo2[0], y: rotSubtitulo2[1], z: rotSubtitulo2[2] });
+
+  subtitulo3.setAttribute('text', 'text:' + contSubtitulo3 + '; size:0.15; font: Droid Sans Mono;');
+  subtitulo3.setAttribute('position', { x: posSubtitulo3[0], y: posSubtitulo3[1], z: posSubtitulo3[2] });
+  subtitulo3.setAttribute('rotation', { x: rotSubtitulo3[0], y: rotSubtitulo3[1], z: rotSubtitulo3[2] });
+
+  subtitulo4.setAttribute('text', 'text:' + contSubtitulo4 + '; size:0.15; font: Droid Sans Mono;');
+  subtitulo4.setAttribute('position', { x: posSubtitulo4[0], y: posSubtitulo4[1], z: posSubtitulo4[2] });
+  subtitulo4.setAttribute('rotation', { x: rotSubtitulo4[0], y: rotSubtitulo4[1], z: rotSubtitulo4[2] });
+
+  subtitulo5.setAttribute('text', 'text:' + contSubtitulo5 + '; size:0.15; font: Droid Sans Mono;');
+  subtitulo5.setAttribute('position', { x: posSubtitulo5[0], y: posSubtitulo5[1], z: posSubtitulo5[2] });
+  subtitulo5.setAttribute('rotation', { x: rotSubtitulo5[0], y: rotSubtitulo5[1], z: rotSubtitulo5[2] });
+
+  subtitulo6.setAttribute('text', 'text:' + contSubtitulo6 + '; size:0.15; font: Droid Sans Mono;');
+  subtitulo6.setAttribute('position', { x: posSubtitulo6[0], y: posSubtitulo6[1], z: posSubtitulo6[2] });
+  subtitulo6.setAttribute('rotation', { x: rotSubtitulo6[0], y: rotSubtitulo6[1], z: rotSubtitulo6[2] });
+
+  subtitulo7.setAttribute('text', 'text:' + contSubtitulo7 + '; size:0.15; font: Droid Sans Mono;');
+  subtitulo7.setAttribute('position', { x: posSubtitulo7[0], y: posSubtitulo7[1], z: posSubtitulo7[2] });
+  subtitulo7.setAttribute('rotation', { x: rotSubtitulo7[0], y: rotSubtitulo7[1], z: rotSubtitulo7[2] });
+
+  portal.setAttribute('scale', { x: 0, y: 0, z: 0 });
+  portal.setAttribute('position', { x: posPortal[0], y: posPortal[1], z: posPortal[2] });
+  portal.setAttribute('rotation', { x: rotPortal[0], y: rotPortal[1], z: rotPortal[2] });
+  audio.innerHTML = audioSrc;
+}
+
+portal.onmouseenter = function (e) {
+  gatillo.innerHTML = '<a-animation attribute="geometry.radius" dur="3000" easing="linear" from=".4" to=".6" repeat="0"></a-animation>';
+};
+
+portal.onmouseleave = function (e) {
+  gatillo.innerHTML = '<a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" from=".2" to=".3" repeat="indefinite"></a-animation>';
+};
+
+portal.addEventListener('animationend', cambioEscena, false);
+start.addEventListener('animationend', cambioEscena, false);
+
+audio.addEventListener('sound-ended', mostrarPortal);
+
+</script>
+
+</body>
 </html>
