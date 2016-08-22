@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Miradas 360 - Temporada 01 - Episodio 02 -  TITULO DE LA PRODUCCION</title>
+<head>
+  <meta charset="utf-8">
+
+    <title>Miradas 360 - Temporada 01 - Episodio 02 - Calle Defensa</title>
     <!-- Facebook iframe embed  -->
     <meta name="twitter:card" content="player">
     <meta name="twitter:site" content="@divevr">
-    <meta name="twitter:title" content="Miradas 360 - Temporada 01 - Episodio 02 -  TITULO DE LA PRODUCCIO">
-    <meta name="twitter:description" content="DESCRIPCION 
-    por NOMBRES COMPLETOS DEL EQIUPO">
+    <meta name="twitter:title" content="Miradas 360 - Temporada 01 - Episodio 02 - Calle Defensa">
+    <meta name="twitter:description" content="Más que un paseo de postal, San Telmo es un terreno de disputa por el espacio público. Conocé el verdadero rostro de #CalleDefensa en 360°, por Clara Maria Cosentino, Juan Sebastian Charovsky y Adriel Sebastian Zarate">
     <meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg">
     <meta name="twitter:player" content="https://miradas360.github.io/miradas360-01/02-SanTelmo/index.html">
     <meta name="twitter:player:width" content="600">
     <meta name="twitter:player:height" content="370">
     
-    <meta property="og:title"  content="Miradas 360 - Temporada 01 - Episodio 02 -  TITULO DE LA PRODUCCIO">
+    <meta property="og:title"  content="Miradas 360 - Temporada 01 - Episodio 02 - Calle Defensa">
     <meta property="og:url" content="https://miradas360.github.io/miradas360-01/02-SanTelmo/index.html">
-    <meta property="og:description"  content="Un viaje a la eternidad de Oesterheld.
-    por Carolina Cerri, Leonardo Gentile, Martín Rabaglia y María Laura Ruggero">
+    <meta property="og:description"  content="Más que un paseo de postal, San Telmo es un terreno de disputa por el espacio público. Conocé el verdadero rostro de #CalleDefensa en 360°, por Clara Maria Cosentino, Juan Sebastian Charovsky y Adriel Sebastian Zarate">
     <meta property="og:type" content="video" />
     <meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
     <meta property="og:image:seucre_url" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
      
     <meta property="og:type" content="video" />
     <meta property="og:video:url" content="https://miradas360.github.io/miradas360-01/02-SanTelmo/index.html">
-    <meta property="og:video:secure_url" content="https://miradas360.github.io/miradas360-01/02-SanTelmo/index.html">
+    <meta property="og:video:secure_url" content="https://miradas360.github.io/miradas360-01/01-SanTelmo/index.html">
     <meta property="og:video:type" content="text/html">
     <meta property="og:video:width" content="560">
     <meta property="og:video:height" content="395">
@@ -36,263 +35,456 @@
     <meta property="og:video:height" content="395">
      
 
-    <meta name="description" content="DESCRIPCION 
-    por NOMBRES COMPLETOS DEL EQIUPO">
+    <meta name="description" content="Más que un paseo de postal, San Telmo es un terreno de disputa por el espacio público. Conocé el verdadero rostro de #CalleDefensa en 360°, por Clara Maria Cosentino, Juan Sebastian Charovsky y Adriel Sebastian Zarate">
 
-    
-    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
-     <script src="../fonts/Muli_Regular.js"></script>
-     
+  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+  <script src="js/droid_sans_mono_regular.typeface.js"></script>
+</head>
+<body>
 
-  </head>
-  <body>
-    <style>
-      html{
-        background: #000;
+  <a-scene>
+
+  <a-assets>
+
+  <img  id="cardboard" src="img/cardboard.png">
+  <img  id="headphones"  src="img/headphones.png">
+  <img  id="rotation" src="img/rotation.png">
+
+  <img  id="intro" src="img/intro.jpg">  
+
+  <img id="bgEscena1" src="img/bgEscena1.jpg">
+  <img id="bgEscena2" src="img/bgEscena2.jpg">
+  <img id="bgEscena3" src="img/bgEscena3.jpg">
+  <img id="bgEscena4" src="img/bgEscena4.jpg">
+  <img id="bgEscena5" src="img/bgEscena5.jpg">
+  <img id="bgEscena6" src="img/bgEscena6.jpg">
+  <img id="bgEscena7" src="img/bgEscena7.jpg">
+  <img id="bgEscena8" src="img/bgEscena8.jpg">
+  <img id="bgEscena9" src="img/bgEscena9.jpg">
+
+</a-assets>
+
+<a-sky color="#000"></a-sky>
+
+<a-entity position="0 2.2 4">
+  <a-entity id="camara" camera look-controls wasd-controls>
+    <a-cursor id='cursor' opacity="0" color="#ff0000">
+    <a-plane id="subtitulo" text="text:; curveSegments:24;" color="white" position="-.25 -.5 0" scale=".1 .1 .1" rotation="-10 0 0"></a-plane>
+
+<!-- intro -->    
+
+<a-image src="#headphones" opacity="0"  position="0 0 -6">
+<a-animation 
+attribute="opacity" 
+from="0" 
+to="1" 
+begin="0"
+dur="5000">
+</a-animation>
+<a-animation 
+attribute="opacity" 
+from="1" 
+to="0" 
+begin="5000"
+dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="10000" to="false"></a-animation>
+<a-animation attribute="rotation"
+dur="5000"
+fill="forwards"
+to="0 360 0" 
+repeat="2"></a-animation>
+</a-image>
+
+<a-image src="#cardboard" visibiity="false" opacity="0"  position="0 0 -6">
+<a-animation attribute="visible" begin="10000" to="true"></a-animation>
+<a-animation 
+attribute="opacity" 
+from="0" 
+to="1" 
+begin="10000"
+dur="5000">
+</a-animation>
+<a-animation 
+attribute="opacity" 
+from="1" 
+to="0" 
+begin="15000"
+dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="20000" to="false"></a-animation>
+<a-animation attribute="rotation"
+begin="10000"
+dur="5000"
+fill="forwards"
+to="0 360 0"
+repeat="3">
+</a-animation>
+</a-image>
+
+<a-image src="#rotation" visibiity="false" opacity="0"  position="0 0 -6">
+<a-animation attribute="visible" begin="20000" to="true"></a-animation>
+<a-animation 
+attribute="opacity" 
+from="0" 
+to="1" 
+begin="20000"
+dur="5000">
+</a-animation>
+<a-animation 
+attribute="opacity" 
+from="1" 
+to="0" 
+begin="25000"
+dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="30000"   to="false"></a-animation>
+<a-animation attribute="rotation"
+begin="20000"
+dur="5000"
+fill="forwards"
+to="0 360 0"
+repeat="3"></a-animation>
+</a-image>
+
+<a-plane text="text: Ponete auriculares para una mejor experiencia; size:0.15; font: Droid Sans Mono;" opacity="0" visibiity="false" color="white" position="-2.7 -1 -6">
+<a-animation attribute="opacity" from="0" to="1" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="5000" dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="10000" to="false"></a-animation>
+</a-plane>
+
+<a-plane text="text: Coloca tu teléfono en el Cardboard; size:0.15; font: Droid Sans Mono;" opacity="0" visibiity="false" color="white" 
+position="-2 -1 -6">
+<a-animation attribute="visible" begin="10000" to="true"></a-animation>
+<a-animation attribute="opacity" from="0" to="1" 
+begin="10000" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="15000" dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="20000" to="false"></a-animation>
+</a-plane>
+
+<a-plane text="text: Vas a poder moverte libremente todo el tiempo; size:0.15; font: Droid Sans Mono;" visibiity="false" opacity="0" color="white" position="-2.7 -1 -6">
+<a-animation attribute="visible" begin="20000" to="true"></a-animation>
+<a-animation attribute="opacity" from="0" to="1" 
+begin="20000" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="25000" dur="5000">
+</a-animation>
+<a-animation attribute="visible" begin="30000" to="false"></a-animation>
+</a-plane>
+
+<a-plane src="#intro" opacity="0" visibility="false" width="5" height="2.8" position="0 0 -3">
+<a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
+</a-animation>
+<a-animation attribute="opacity" from="1" to="0" 
+begin="35000" dur="5000">
+</a-animation>
+<a-animation id="start" attribute="visible" begin="40000" to="false"></a-animation>
+</a-plane>
+
+<!-- cierre -->
+
+<a-plane id="tituloCierre" text="text:Calle Defensa; font: Droid Sans Mono;" visibility="false" position="-3 2 -6" opacity="0" color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Montado y Desarrollado entre julio y agosto de 2016; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 2 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:En Defensa del 700 al 1200, San Telmo, Buenos Aires; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 1.5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Guion y producción general: Clara Maria Cosentino; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 1 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Mentoria: Juan Sebastian Charovsky; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 .5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="cierre" text="text:Montaje y programación: Adriel Sebastian Zarate; size:0.15; font: Droid Sans Mono;" visibility="false" position="-3 0 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Agradecimientos; size:0.15; font: Droid Sans Mono;" position="-1.5 2 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:La Flaca; size:0.15; font: Droid Sans Mono;" position="-1.5 1.5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Víctor “Cuervo” Rodriguez Lizama; size:0.15; font: Droid Sans Mono;" position="-1.5 1 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Edio Bassi; size:0.15; font: Droid Sans Mono;" position="-1.5 .5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Alejandro “Topo” Cabrera Britos; size:0.15; font: Droid Sans Mono;" position="-1.5 0 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Americo, “el Mapuche”; size:0.15; font: Droid Sans Mono;" position="-1.5 -.5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Cecilio y Marcos; size:0.15; font: Droid Sans Mono;" position="-1.5 -1 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Adriel Sebastian Zarate; size:0.15; font: Droid Sans Mono;" position="-1.5 -1.5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento1" text="text:Gonzalo Sierra; size:0.15; font: Droid Sans Mono;" position="-1.5 -2 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento2" text="text:Agradecimientos; size:0.15; font: Droid Sans Mono;" position="-1.5 2 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento2" text="text:DIVE; size:0.15; font: Droid Sans Mono;" visibility="false" position="-1.5 1.5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento2" text="text:Seiren Films; size:0.15; font: Droid Sans Mono;" visibility="false" position="-1.5 1 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento2" text="text:HUMA; size:0.15; font: Droid Sans Mono;" visibility="false" position="-1.5 .5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento2" text="text:Acamica; size:0.15; font: Droid Sans Mono;" visibility="false" position="-1.5 0 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+<a-plane class="agradecimiento2" text="text:Hacks/Hackers BA; size:0.15; font: Droid Sans Mono;" visibility="false" position="-1.5 -.5 -6" opacity="0"  color="white" scale="0 0 0"></a-plane>
+
+  </a-entity>
+</a-entity>
+
+<a-sphere class="escena" src="#bgEscena1" radius="1" position="0 1.5 12" scale="0 0 0" rotation="0 155 0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena2" radius="1" position="0 1.5 3" scale="0 0 0" opacity="0" rotation="0 177 0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena3" radius="1" position="0 1.5 3" scale="0 0 0" opacity="0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena4" radius="1" position="0 2.5 3" scale="0 0 0" opacity="0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena5" radius="1" position="0 1.5 3" scale="0 0 0" opacity="0" rotation="0 0 0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena6" radius="1" position="0 1.5 3" scale="0 0 0" opacity="0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena7" radius="1" position="0 1.5 3" scale="0 0 0" opacity="0" rotation="0 260 0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena8" radius="1" position="0 1.5 3" scale="0 0 0" opacity="0"></a-sphere>
+<a-sphere class="escena" src="#bgEscena9" radius="1" position="0 8 0" scale="0 0 0" opacity="0"></a-sphere>
+
+<a-torus id="portal" position="0 2 0" rotation="0 0 0" color="red" opacity=".8" segments-radial="4" segments-tubular="100" radius=".3" radius-tubular="0.01" scale="0 0 0">
+<a-sphere id="gatillo" position="0 0 0" color="red;" opacity=".5" radius=".2">
+<a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" to=".25" repeat="indefinite"></a-animation>
+</a-sphere>
+</a-torus>
+
+</a-scene>
+
+<script>
+
+  var escenaNro = 0;
+
+  var transiciones = {
+
+    transicion1:{
+      animEscenaSale:'',
+      animEscenaEntra:
+      '<a-animation attribute="position" direction="alternate" dur="4000" easing="ease-out" from="0 1.5 12" to="0 1.5 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" direction="alternate" dur="4000" easing="ease-in" from="0 0 0" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e1.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: 'Defensa y Chile'
+    },
+
+    transicion2:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e2.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: 'Defensa al 700'
+    },
+
+    transicion3:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e3.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: 'Defensa al 800'
+    },
+
+    transicion4:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e4.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: 'Defensa al 900'
+    },
+
+    transicion5:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e5.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: 'Defensa al 1000'
+    },
+
+    transicion6:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e6.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: 'Defensa al 1100'
+    },
+
+    transicion7:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e7.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: 'Plaza Dorrego'
+    },
+
+    transicion8:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '<a-entity sound="src: sound/e8.mp3; autoplay: true; volume: 3;"></a-entity>',
+      subtituloTxt: ''
+    },
+
+
+    transicion9:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" begin="25000" dur="4000" easing="linear" from="1" to="0" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '',
+      subtituloTxt: ''
+    },
+
+    transicion10:{
+      animEscenaSale:
+      '<a-animation attribute="position" dur="6000" easing="linear" direction="alternate" to="0 1.5 2" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="4000" easing="linear" direction="alternate" to="0" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="15 15 -15" repeat="0"></a-animation>',
+      animEscenaEntra:
+      '<a-animation attribute="position" dur="1500" easing="linear" direction="alternate" to="0 0 0" repeat="0"></a-animation>' +
+      '<a-animation attribute="material.opacity" dur="1500" easing="linear" direction="alternate" to="1" repeat="0"></a-animation>' +
+      '<a-animation attribute="scale" dur="1500" easing="linear" direction="alternate" to="10 10 -10" repeat="0"></a-animation>',
+      posPortal: [0, 2, 0],
+      rotPortal: [0, 0, 0],
+      audioSrc: '',
+      subtituloTxt: ''
+    }
+  };
+
+  function cambioEscena() {
+
+    console.log('escenaNro ' + escenaNro);
+
+    cursor.setAttribute('opacity', 1);
+    portal.setAttribute('scale', { x: 0, y: 0, z: 0 });
+
+    if ( escenaNro < 7 ) {
+      setTimeout(function(){ portal.setAttribute('scale', { x: 1, y: 1, z: 1 }) }, 5000);
+    }
+
+    if ( escenaNro === 7 ) {
+
+      setTimeout(function(){
+        var posicion = Object.keys(transiciones)[escenaNro];
+        document.getElementsByClassName("escena")[(escenaNro - 1)].innerHTML = transiciones[posicion].animEscenaSale;
+        document.getElementsByClassName("escena")[escenaNro].innerHTML = transiciones[posicion].animEscenaEntra;
+      }, 10000);
+
+    }
+
+    if ( escenaNro === 8 ) {
+
+      cursor.setAttribute('opacity', 0);
+
+      tituloCierre.setAttribute('scale', {x: 1, y: 1, z: 1});
+      tituloCierre.innerHTML = 
+      '<a-animation attribute="opacity" from="0" to="1" dur="5000"></a-animation>' +
+      '<a-animation attribute="opacity" from="1" to="0" begin="5000" dur="5000"></a-animation>';
+
+      var cierres = document.querySelectorAll('.cierre');
+      for (var i = 0; i < cierres.length; i++) {
+        cierres[i].setAttribute('scale', {x: 1, y: 1, z: 1});
+        cierres[i].innerHTML = 
+        '<a-animation attribute="opacity" from="0" to="1" begin="10000" dur="5000"></a-animation>' +
+        '<a-animation attribute="visible" begin="10000" to="true"></a-animation>' +
+        '<a-animation attribute="opacity" from="1" to="0" begin="20000" dur="5000"></a-animation>';
       }
-    </style>
-    <a-scene>
-      <a-assets>  
-        <img  id="cardboard" src="../images/cardboard.png">
-        <img  id="headphones"  src="../images/headphones.png">
-        <img  id="rotation" src="../images/rotation.png">
-        <a-mixin id="font" text="font: Muli"></a-mixin>
-      </a-assets>
 
+      var agradecimientos1 = document.querySelectorAll('.agradecimiento1');
+      for (var i = 0; i < agradecimientos1.length; i++) {
+        agradecimientos1[i].setAttribute('scale', {x: 1, y: 1, z: 1});
+        agradecimientos1[i].innerHTML = 
+        '<a-animation attribute="opacity" from="0" to="1" begin="20000" dur="5000"></a-animation>' +
+        '<a-animation attribute="visible" begin="20000" to="true"></a-animation>' +
+        '<a-animation attribute="opacity" from="1" to="0" begin="30000" dur="5000"></a-animation>';
+      }
 
+      var agradecimientos2 = document.querySelectorAll('.agradecimiento2');
+      for (var i = 0; i < agradecimientos2.length; i++) {
+        agradecimientos2[i].setAttribute('scale', {x: 1, y: 1, z: 1});
+        agradecimientos2[i].innerHTML = 
+        '<a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000"></a-animation>' +
+        '<a-animation attribute="visible" begin="3000" to="true"></a-animation>' +
+        '<a-animation attribute="opacity" from="1" to="0" begin="40000" dur="5000"></a-animation>';
+      }
 
+      return false;
+    }
 
+    var posicion = Object.keys(transiciones)[escenaNro];
+    aEscena(
+      transiciones[posicion].animEscenaSale,
+      transiciones[posicion].animEscenaEntra,
+      transiciones[posicion].posPortal,
+      transiciones[posicion].rotPortal,
+      transiciones[posicion].audioSrc,
+      transiciones[posicion].subtituloTxt
+      );
+    escenaNro++;
+  }
 
+  function aEscena(animEscenaSale, animEscenaEntra, posPortal, rotPortal, audioSrc, subtituloTxt) {
 
+    if ( escenaNro > 0 ) document.getElementsByClassName("escena")[(escenaNro - 1)].innerHTML = animEscenaSale;
+    document.getElementsByClassName("escena")[escenaNro].innerHTML = animEscenaEntra;
+    portal.setAttribute('position', { x: posPortal[0], y: posPortal[1], z: posPortal[2] });
+    portal.setAttribute('rotation', { x: rotPortal[0], y: rotPortal[1], z: rotPortal[2] });
+    subtitulo.innerHTML = audioSrc;
+    subtitulo.setAttribute('text', { text: subtituloTxt });
+  }
 
+  portal.onmouseenter = function (e) {
+    gatillo.innerHTML = '<a-animation attribute="geometry.radius" dur="2000" easing="linear" from=".25" to=".35" repeat="0"></a-animation>';
+  };
 
+  portal.onmouseleave = function (e) {
+    gatillo.innerHTML = '<a-animation attribute="geometry.radius" direction="alternate" dur="800" easing="ease-out" from=".2" to=".25" repeat="indefinite"></a-animation>';
+  };
 
-
-
-    <a-image src="#headphones" opacity="0"  position="0 3 -3">
-      <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="0"
-              dur="5000">
-               </a-animation>
-      <a-animation 
-            attribute="opacity" 
-              from="1" 
-              to="0" 
-              begin="5000"
-              dur="5000">
-                </a-animation>
-            <a-animation attribute="visible" begin="10000" to="false"></a-animation>
-
-              <a-animation attribute="rotation"
-               dur="5000"
-               fill="forwards"
-               to="0 360 0" 
-               repeat="2"></a-animation>
-       </a-image>
-
-       <a-image src="#cardboard" visibiity="false" opacity="0"  position="0 3 -3">
-         <a-animation attribute="visible" begin="10000" to="true"></a-animation>
-
-      <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="10000"
-              dur="5000">
-               </a-animation>
-      <a-animation 
-            attribute="opacity" 
-              from="1" 
-              to="0" 
-              begin="15000"
-              dur="5000">
-                </a-animation>
-                <a-animation attribute="visible" begin="20000" to="false"></a-animation>
-
-                <a-animation attribute="rotation"
-                 begin="10000"
-               dur="5000"
-               fill="forwards"
-               to="0 360 0"
-               repeat="3"></a-animation>
-       </a-image>
-       <a-image src="#rotation" visibiity="false" opacity="0"  position="0 3 -3">
-         <a-animation attribute="visible" begin="20000" to="true"></a-animation>
-
-      <a-animation 
-            attribute="opacity" 
-              from="0" 
-              to="1" 
-              begin="20000"
-              dur="5000">
-               </a-animation>
-      <a-animation 
-            attribute="opacity" 
-              from="1" 
-              to="0" 
-              begin="25000"
-              dur="5000">
-          </a-animation>
-                <a-animation attribute="visible" begin="30000" to="false"></a-animation>
-
-                <a-animation attribute="rotation"
-                 begin="20000"
-               dur="5000"
-               fill="forwards"
-               to="0 360 0"
-               repeat="3"></a-animation>
-       </a-image>
-
-      
-
-  
-
-<a-plane text="text: Vas a poder moverte libremente todo el tiempo;
- size:0.15" visibiity="false" 
-      mixin="font" opacity="0" color="white" position="-2 2 -3">
-        <a-animation attribute="visible" begin="20000" to="true"></a-animation>
-        <a-animation attribute="opacity" from="0" to="1" 
-         begin="20000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="25000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="30000" to="false"></a-animation>
-  </a-plane>
-  
-
-   <a-plane text="text: Coloca tu telefono en el Cardboard;
- size:0.15" 
-      mixin="font" opacity="0" visibiity="false" color="white" position="-1.75 2 -3">
-        <a-animation attribute="visible" begin="10000" to="true"></a-animation>
-        <a-animation attribute="opacity" from="0" to="1" 
-         begin="10000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="15000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="20000" to="false"></a-animation>
-
-      </a-plane>
-       
-       <a-plane text="text: Ponete auriculares para una mejor experiencia;
- size:0.15" 
-      mixin="font" opacity="0" visibiity="false" color="white" position="-2.25 2 -3">
-        <a-animation attribute="opacity" from="0" to="1" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="5000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="10000" to="false"></a-animation>
-      </a-plane>
-
-      <a-plane text="text: Miradas 360 #1;" 
-      mixin="font"
-      position="-2.2 2 -3" opacity="0" visibiity="false" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="35000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="40000" to="false"></a-animation>
-      </a-plane>
-       <a-plane text="text: 02 - TITULO DE LA PRODUCCION ;" visibiity="false"  position="-2.2 1 -3" opacity="0" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="35000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="40000" to="false"></a-animation>
-      </a-plane>
-
-      <a-plane text="text: Miradas 360 #1;" 
-      mixin="font"
-      position="-2.2 2 -3" opacity="0" visibiity="false" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="45000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="45000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="50000" to="false"></a-animation>
-      </a-plane>
-       <a-plane text="text: 03- TITULO DE LA PRODUCCION;" visibiity="false"  position="-2.2 1 -3" opacity="0" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="45000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="45000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="50000" to="false"></a-animation>
-      </a-plane>
-       
-
-
-  <a-plane text="text:Montado y Desarrollado entre Julio y Agosto 2016 ;size:0.15" visibiity="false"  
-       position="-3 3 -3" opacity="0"  color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text: en Locacion nombre;size:0.15" visibiity="false"  
-       position="-3 2.5 -3" opacity="0"  color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text: Guion y produccion general: ;size:0.15" visibiity="false"  
-       position="-3 2 -3" opacity="0"  color="white">
-         <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text:  Mentoria, visuales e imagenes: ;size:0.15" visibiity="false"  
-       position="-3 1.5 -3" opacity="0"  color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-      <a-plane text="text: Montaje y programacion: ;size:0.15" visibiity="false"  
-       position="-3 1 -3" opacity="0"  color="white">
-         <a-animation attribute="opacity" from="0" to="1" begin="50000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="55000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="60000" to="false"></a-animation>
-      </a-plane>
-
-
-
-      
-    
-      <a-camera position="0 1.8 1.5"></a-camera>
-    </a-scene>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-82866209-1', 'auto');
-  ga('send', 'pageview');
+  portal.addEventListener('animationend', cambioEscena, false);
+  start.addEventListener('animationend', cambioEscena, false);
+  subtitulo.addEventListener('sound-ended', cambioEscena, false);
 
 </script>
-  </body>
 
+</body>
 </html>
 
