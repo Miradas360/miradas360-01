@@ -9,7 +9,7 @@
     <meta name="twitter:title" content="Miradas 360 - Temporada 01 - Episodio 04 - El último viaje del Eternauta">
     <meta name="twitter:description" content="Un viaje a la eternidad de Oesterheld.
     por Carolina Cerri, Leonardo Gentile, Martín Rabaglia y María Laura Ruggero">
-    <meta name="twitter:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg">
+    <meta name="twitter:image" content="https://miradas360.github.io/miradas360-01/images/posters/04-eternauta.jpg">
     <meta name="twitter:player" content="https://miradas360.github.io/miradas360-01/04-Eternauta/index.html">
     <meta name="twitter:player:width" content="600">
     <meta name="twitter:player:height" content="370">
@@ -19,8 +19,8 @@
     <meta property="og:description"  content="Un viaje a la eternidad de Oesterheld.
     por Carolina Cerri, Leonardo Gentile, Martín Rabaglia y María Laura Ruggero">
     <meta property="og:type" content="video" />
-    <meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
-    <meta property="og:image:seucre_url" content="https://cdn-images-1.medium.com/max/1600/1*YX3nD8Xj371B0mr3z4jeJA.jpeg" />
+    <meta property="og:image" content="https://miradas360.github.io/miradas360-01/images/posters/04-eternauta.jpg" />
+    <meta property="og:image:seucre_url" content="https://miradas360.github.io/miradas360-01/images/posters/04-eternauta.jpg" />
      
     <meta property="og:type" content="video" />
     <meta property="og:video:url" content="https://miradas360.github.io/miradas360-01/04-Eternauta">
@@ -43,7 +43,7 @@
      <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
        <script src="https://rawgit.com/ngokevin/aframe-event-set-component/v0.2.0/dist/aframe-event-set-component.min.js"></script>
 
-     <script src="../fonts/Muli_Regular.js"></script>
+     <script src="Muli_Regular.js"></script>
      
 
   </head>
@@ -270,12 +270,6 @@
        <a-animation attribute="visible" begin="40000" to="false"></a-animation>
       </a-plane>
 
- <a-entity id="first" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:01-beccar.mp3; loop:false; on:playfirst"></a-entity>
- <a-entity id="bosch" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:03-bosch.mp3; loop:false; on:playbosch"></a-entity>
- <a-entity id="adios" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:04-adios.mp3; loop:false; on:playadios"></a-entity>
- <a-entity id="devoto" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:02-01-devoto.mp3; loop:false; on:playDevoto"></a-entity>
- <a-entity id="soundtrack" geometry="primitive: plane" material="color: blue" position="0 5 2" sound="src:soundtrack.mp4; loop:true;autoplay:true;"></a-entity> 
-      
 
 
       <!-- Cielos -->
@@ -809,9 +803,30 @@
 
       
     
-      <a-camera id="miradas-cam" position="0 1.8 1.5"></a-camera>
+      <a-camera id="miradas-cam" position="0 1.8 1.5">
+
+
+       <a-entity id="first" geometry="primitive: plane" material="color: blue"  sound="src:01-beccar.mp3; loop:false; on:playfirst"></a-entity>
+ <a-entity id="bosch" geometry="primitive: plane" material="color: blue" sound="src:03-bosch.mp3; loop:false; on:playbosch"></a-entity>
+ <a-entity id="adios" geometry="primitive: plane" material="color: blue" sound="src:04-adios.mp3; loop:false; on:playadios"></a-entity>
+ <a-entity id="devoto" geometry="primitive: plane" material="color: blue"  sound="src:02-01-devoto.mp3; loop:false; on:playDevoto"></a-entity>
+ <a-entity id="soundtrack" geometry="primitive: plane" material="color: blue"  sound="src:soundtrack.mp4; loop:true;autoplay:true;"></a-entity> 
+      
+
+
+      </a-camera>
     </a-scene>
   </body>
      <script src="app.js"></script>
+     <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82866209-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </html>
 
