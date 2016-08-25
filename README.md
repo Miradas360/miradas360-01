@@ -16,7 +16,7 @@ https://miradas360.github.io/miradas360-01/
 
 ###01 Pasaje a Borges
 
-<img class="wow fadeIn" src="https://miradas360.github.io/miradas360-01//images/posters/01-borges.jpg">
+<img class="wow fadeIn" src="https://miradas360.github.io/miradas360-01//images/posters/01-borges.png">
 
 <p>Un recorrido por la Antigua Biblioteca Nacional bajo la guía de uno de sus más reconocidos directores, Jorge Luis Borges, acompañado por “El Tango”, una colaboración entre el escritor y Astor Piazzola de 1965.</p>
 Locaciones Utilizadas:
