@@ -88,8 +88,10 @@
         <img  id="familia-chica" src="familia-chica.jpg">
 
          <img  id="donde" src="donde.jpg">
-         <img  id="batallon" src="batallon.jpg">
-         <img  id="sheraton" src="sheraton.jpg">
+         <img id="fin01" src="fin01.jpg">
+         <img id="fin02" src="fin02.jpg">
+         <img id="fin03" src="fin03.jpg">
+         <img id="titulo01" src="titulo01.jpg">
 
         <img  id="beccar" src="01-02-beccar-2.jpeg">
         <img  id="noche" src="02-01-devoto-4.jpg">
@@ -231,25 +233,18 @@
        <a-animation attribute="visible" begin="10000" to="false"></a-animation>
       </a-plane>
 
-      <a-plane text="text: Miradas 360 #1;" 
-      mixin="font"
-      position="-2.2 2 -3" opacity="0" visibiity="false" color="white">
-        <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
-        </a-animation>
-         <a-animation attribute="opacity" from="1" to="0" 
-         begin="35000" dur="5000">
-       </a-animation>
-       <a-animation attribute="visible" begin="40000" to="false"></a-animation>
-      </a-plane>
-       <a-plane text="text:  El ultimo viaje del Eternauta;" visibiity="false"  position="-2.2 1 -3" opacity="0" color="white">
+       <a-image src="#titulo01" opacity="0"  look-at="#miradas-cam"
+          visibility="false" width="10" height="5" position="8 2 5"
+               scale="1 1 1" >
         <a-animation attribute="opacity" from="0" to="1" begin="30000" dur="5000">
         </a-animation>
          <a-animation attribute="opacity" from="1" to="0"  id="firstPlay"
          begin="35000" dur="5000">
        </a-animation>
        <a-animation attribute="visible" begin="40000" to="false"></a-animation>
-      </a-plane>
+       </a-image>
 
+      
 
 
       <!-- Cielos -->
@@ -560,10 +555,45 @@
              <a-animation attribute="visible" begin="215000" to="false"></a-animation>
  
        </a-image>
-      </a-image>
+      
+<a-image src="#fin01" opacity="0"  look-at="#miradas-cam"
+          visibility="false" width="10" height="5"  position="0 2 -3"
+               scale="1 1 1" >
+  <a-animation attribute="visible" begin="290000" to="true"></a-animation>
+        <a-animation attribute="opacity" from="0" to="1" begin="290000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" begin="300000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="305000" to="false"></a-animation>
+ 
+       </a-image>
+
+       <a-image src="#fin02" opacity="0"  look-at="#miradas-cam"
+          visibility="false" width="10" height="5"  position="0 2 -3"
+               scale="1 1 1" >
+  <a-animation attribute="visible" begin="290000" to="true"></a-animation>
+          <a-animation attribute="visible" begin="305000" to="true"></a-animation>
+        <a-animation attribute="opacity" from="0" to="1" begin="305000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" begin="320000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="325000" to="false"></a-animation> 
+       </a-image>
 
 
-    
+       <a-image src="#fin03" opacity="0"  look-at="#miradas-cam"
+          visibility="false" width="10" height="5" position="0 2 -3"
+               scale="1 1 1" >
+ <a-animation attribute="visible" begin="325000" to="true"></a-animation>
+        <a-animation attribute="opacity" from="0" to="1" begin="325000" dur="5000">
+        </a-animation>
+         <a-animation attribute="opacity" from="1" to="0" begin="335000" dur="5000">
+       </a-animation>
+       <a-animation attribute="visible" begin="340000" to="false"></a-animation>
+       </a-image>
+      
+
+      
       <a-camera id="miradas-cam" position="0 1.8 1.5">
 
 
