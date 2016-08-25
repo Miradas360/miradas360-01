@@ -100,7 +100,6 @@ Dirección: `http://localhost:8080`
 
 
 <h3> Miradas360 es posible gracias al apoyo de 
-        <div class="one-half column wow fadeIn" data-wow-duration="3s" data-wow-delay="1.1s">
           <a target="_blank" href="https://twitter.com/HacksHackersBA">
           <img src="https://pbs.twimg.com/profile_images/742680944629428224/Ndm9xp-y.jpg">
         </a>
@@ -114,9 +113,6 @@ Dirección: `http://localhost:8080`
          <a target="_blank" href="https://twitter.com/genoshans">
           <img src="https://pbs.twimg.com/profile_images/765907520376475652/S_vOsCP7.jpg">
         </a>
-        </div>
-
-         <div class="one-half column social  wow fadeIn"  data-wow-duration="3s" data-wow-delay="1.5s">
           <a target="_blank" href="https://twitter.com/acamica_com">
             <img src="https://pbs.twimg.com/profile_images/552455072555102208/UUgmlIHz.png">
         </a>
@@ -131,9 +127,7 @@ Dirección: `http://localhost:8080`
           <a target="_blank" href="https://twitter.com/wayra">
           <img src="https://pbs.twimg.com/profile_images/3570702254/191f4300a7fdac38f0b70c2d3be8e89a.jpeg">
         </a>
-        </div>
-        </div>
-
+       
 
 # Encontranos en 
 https://www.facebook.com/VRMiradas360/
